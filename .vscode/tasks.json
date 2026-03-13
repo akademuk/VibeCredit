@@ -1,0 +1,10 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Fix swiper slides structure",
+			"type": "shell",
+			"command": "node _fix-slides.js && rm _fix-slides.js"
+		}
+	]
+}
