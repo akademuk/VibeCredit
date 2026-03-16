@@ -16,7 +16,9 @@ body.no-scroll {
 }
 
 .header {
-    padding: 16px;
+    padding: 4px 16px;
+    background: #FFF;
+    box-shadow: 0 4px 18.9px 0 rgba(0, 0, 0, 0.03);
 }
 
 .header__content {
@@ -83,11 +85,11 @@ body.no-scroll {
 /* ===== Mobile Menu ===== */
 .mobile-menu {
     position: fixed;
-    top: 96px;
+    top: 72px;
     right: 0;
     width: 100%;
     max-width: 100%;
-    height: calc(100% - 96px);
+    height: calc(100% - 72px);
     border-radius: 0 0 20px 20px;
     background: #FFF;
     z-index: 1000;
@@ -569,6 +571,7 @@ body.no-scroll {
     padding: 16px 36px;
     display: flex;
     min-height: 56px;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     gap: 8px;
@@ -597,6 +600,7 @@ body.no-scroll {
     font-size: 14px;
     font-weight: 600;
     margin-left: auto;
+    cursor: pointer;
 }
 
 .hero__calc-notice {
@@ -611,7 +615,6 @@ body.no-scroll {
     align-self: stretch;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.10);
-    backdrop-filter: blur(25px);
     z-index: 2;
 }
 
@@ -1953,6 +1956,7 @@ body.no-scroll {
     align-self: stretch;
     gap: 8px;
     padding-left: 16px;
+    cursor: pointer;
 }
 
 .faq-right__items .faq-right__item-title {
@@ -2592,26 +2596,176 @@ body.no-scroll {
     letter-spacing: -0.18px;
 }
 
+.breadcrumbs {
+    padding: 0 16px;
+}
 
+.main-margin {
+    margin-top: 64px;
+}
 
+.breadcrumbs .container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
 
+.breadcrumbs__list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
+.breadcrumbs__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #1D1D1B;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-decoration: none;
+}
 
+.breadcrumbs__link::after {
+    content: "";
+    background: url(../images/breadcrumbs.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    display: flex;
+}
 
+.breadcrumbs__item {
+    color: #C1C1C1;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+}
 
+.faq-page {
+    margin-top: 64px;
+    padding: 0 16px 108px 16px;
+}
 
+.faq-page .container {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 44px;
+    flex: 1 0 0;
+}
 
+.faq-page__left {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    flex: 1 0 0;
+}
 
+.faq-page__left-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+    align-self: stretch;
+}
 
+.faq-page__left-title h1 {
+    color: #1D1D1B;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+}
 
+.faq-page__left-title-description {
+    color: #4B4B49;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
+.faq-page__left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
 
+.faq-page__left-content-item {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    border-radius: 28px;
+    background: #F9F9F9;
+}
 
+.faq-page__left-content-item .h2 {
+    color: #1D1D1B;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.18px;
+}
 
+.faq-page__right {
+    padding: 20px;
+    border-radius: 32px;
+    border: 1px solid #EEE;
+    background: #FFF;
+}
 
+.faq-page__right .hero__calculate-box {
+    padding: 0;
+}
 
+.faq-page__right .hero__calc {
+    gap: 32px;
+}
 
+.faq-page__right .hero__calc .h2 {
+    color: #1D1D1B;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
+}
 
+.faq-page__right .hero__calc-notice {
+    padding: 0;
+    flex-direction: column;
+}
+
+.faq-page__right .hero__calc-notice .hero__calc-notice-text {
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.12px;
+}
+
+.faq-page__right .hero__calculate-blur {
+    display: none;
+}
+
+.faq-page__right .hero__calc-notice .hero__calc-notice-text a {
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.12px;
+}
 
 
 @media (min-width: 1280px) {
@@ -3847,6 +4001,83 @@ body.no-scroll {
     .modal__body .loan-application__top-box-table .h3 {
         font-size: 20px;
     }
+
+    .breadcrumbs .container {
+        max-width: 1200px;
+    }
+
+    .breadcrumbs__link {
+        font-size: 16px;
+    }
+
+    .breadcrumbs__item {
+        font-size: 16px;
+    }
+
+    .faq-page .container {
+        display: flex;
+        max-width: 1200px;
+        padding-bottom: 120px;
+        align-items: flex-start;
+        gap: 44px;
+        flex-direction: row;
+    }
+
+    .faq-page__left {
+        width: 760px;
+        gap: 44px;
+        flex-shrink: 0;
+        flex: none;
+    }
+
+    .faq-page__right {
+        padding: 20px;
+        flex: 1 0 0;
+        position: sticky;
+        top: 0;
+    }
+
+    .faq-page__left-title h1 {
+        font-size: 44px;
+    }
+
+    .faq-page__left-title-description {
+        font-size: 14px;
+        letter-spacing: 0.14px;
+    }
+
+    .faq-page .faq-page__left-content-item {
+        padding: 24px;
+        border-radius: 28px;
+    }
+
+    .faq-page__left-content-item .h2 {
+        font-size: 20px;
+        letter-spacing: -0.2px;
+    }
+
+    .faq-page__right .hero__calc .h2 {
+        font-size: 26px;
+    }
+
+    .faq-page__right .hero__calc-notice {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .faq-page__right .hero__calc-notice .hero__calc-notice-text {
+        font-size: 14px;
+        letter-spacing: 0.14px;
+    }
+
+    .faq-page__right .hero__calc-notice .hero__calc-notice-text a {
+        font-size: 14px;
+        letter-spacing: 0.14px;
+    }
+
+    .faq-page {
+        padding-bottom: 64px;
+    }
 }
 
 /* ===== Loan Application: Tabs & Panels ===== */
@@ -3891,4 +4122,3 @@ body.no-scroll {
     overflow: auto;
     padding-right: 10px;
 }
-
