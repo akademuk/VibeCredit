@@ -247,4 +247,81 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     });
   }
+
+  // ===== Blog Filter & Load More =====
+  const blogSection = document.querySelector('.blog-section');
+  if (blogSection) {
+    const tabs = blogSection.querySelectorAll('.blog-section-tab');
+    const articles = blogSection.querySelectorAll('.blog-article');
+    const loadMoreBtn = blogSection.querySelector('.blog-section-load-more');
+    const VISIBLE_COUNT = 6;
+    let currentCategory = 'all';
+
+    function getFiltered() {
+      return [...articles].filter((article) => {
+        if (currentCategory === 'all') return true;
+        return article.dataset.category === currentCategory;
+      });
+    }
+
+    function renderArticles() {
+      const filtered = getFiltered();
+      let visibleCount = 0;
+
+      articles.forEach((article) => {
+        article.style.display = 'none';
+        article.classList.remove('blog-article--visible');
+      });
+
+      filtered.forEach((article, i) => {
+        if (i < VISIBLE_COUNT) {
+          article.style.display = '';
+          article.classList.add('blog-article--visible');
+          visibleCount++;
+        }
+      });
+
+      // Show/hide load more button
+      if (loadMoreBtn) {
+        loadMoreBtn.style.display = filtered.length > visibleCount ? '' : 'none';
+      }
+    }
+
+    function loadMore() {
+      const filtered = getFiltered();
+      const currentlyVisible = filtered.filter((a) => a.classList.contains('blog-article--visible')).length;
+      let shown = 0;
+
+      filtered.forEach((article, i) => {
+        if (i >= currentlyVisible && shown < VISIBLE_COUNT) {
+          article.style.display = '';
+          article.classList.add('blog-article--visible');
+          shown++;
+        }
+      });
+
+      const totalVisible = currentlyVisible + shown;
+      if (loadMoreBtn) {
+        loadMoreBtn.style.display = filtered.length > totalVisible ? '' : 'none';
+      }
+    }
+
+    // Tab click
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((t) => t.classList.remove('blog-section-tab--active'));
+        tab.classList.add('blog-section-tab--active');
+        currentCategory = tab.dataset.category;
+        renderArticles();
+      });
+    });
+
+    // Load more click
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', loadMore);
+    }
+
+    // Init
+    renderArticles();
+  }
 });

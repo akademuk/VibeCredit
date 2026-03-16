@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="VibeCredit — фінанси, що відчувають твій вайб. Дізнайтеся більше про наші послуги та продукти.">
+    <title>VibeCredit — фінанси, що відчувають твій вайб</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+
+    <!-- Libraries CSS -->
+    <!-- Libraries CSS (Deferred) -->
+    <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- NoScript Fallback -->
+    <noscript>
+        <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" />
+    </noscript>
+
+    <!-- Scripts (Deferred) -->
+    <script src="assets/libs/swiper/swiper-bundle.min.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="/" class="header__logo" aria-label="VibeCredit — на головну">
+                    <img src="assets/images/logo.png" width="150" height="44" alt="VibeCredit Logo">
+                </a>
+                <nav class="header__nav" aria-label="Основна навігація">
+                    <ul class="header__menu">
+                        <li class="header__menu-item">
+                            <a href="#hero" class="header__menu-link header__menu-link--active">Головна</a>
+                        </li>
+                        <li class="header__menu-item header__menu-item--has-submenu">
+                            <a href="#about-scene" class="header__menu-link" aria-haspopup="true" aria-expanded="false">
+                                Оплата кредиту
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7"
+                                    fill="none">
+                                    <path d="M12.4167 0.750001L6.58333 5.75L0.75 0.75" stroke="#919191"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <ul class="header__submenu">
+                                <li class="header__submenu-item">
+                                    <a href="#payment-card" class="header__submenu-link">Оплата карткою</a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="#payment-terminal" class="header__submenu-link">Оплата через термінал</a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="#payment-schedule" class="header__submenu-link">Графік платежів</a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="#early-repayment" class="header__submenu-link">Дострокове погашення</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#faq" class="header__menu-link">Часті питання</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#about" class="header__menu-link">Про нас</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <div class="header__language">
+                        <select name="language" id="language-select" class="header__language-select"
+                            aria-label="Оберіть мову">
+                            <option value="ua" selected>UA</option>
+                            <option value="ru">RU</option>
+                        </select>
+                    </div>
+                    <div class="header__buttons">
+                        <a href="/login" class="header__btn header__btn--login">
+                            <span>Увійти</span>
+                            <img src="assets/images/people-icon.svg" width="24" height="24" alt="" aria-hidden="true">
+                        </a>
+                        <a href="/apply" class="header__btn header__btn--offer">
+                            Оформити кредит
+                        </a>
+                    </div>
+                </div>
+                <button class="header__burger" aria-label="Відкрити меню" aria-expanded="false"
+                    aria-controls="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu__inner">
+            <nav class="mobile-menu__nav" aria-label="Мобільна навігація">
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__item">
+                        <a href="#hero" class="mobile-menu__link mobile-menu__link--active">Головна</a>
+                    </li>
+                    <li class="mobile-menu__item mobile-menu__item--has-submenu">
+                        <button class="mobile-menu__link mobile-menu__link--toggle" type="button" aria-expanded="false">
+                            Оплата кредиту
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7"
+                                fill="none">
+                                <path d="M12.4167 0.750001L6.58333 5.75L0.75 0.75" stroke="#919191" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <ul class="mobile-menu__submenu">
+                            <li class="mobile-menu__submenu-item">
+                                <a href="#payment-card" class="mobile-menu__submenu-link">Оплата карткою</a>
+                            </li>
+                            <li class="mobile-menu__submenu-item">
+                                <a href="#payment-terminal" class="mobile-menu__submenu-link">Оплата через термінал</a>
+                            </li>
+                            <li class="mobile-menu__submenu-item">
+                                <a href="#payment-schedule" class="mobile-menu__submenu-link">Графік платежів</a>
+                            </li>
+                            <li class="mobile-menu__submenu-item">
+                                <a href="#early-repayment" class="mobile-menu__submenu-link">Дострокове погашення</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#faq" class="mobile-menu__link">Часті питання</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#about" class="mobile-menu__link">Про нас</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__language">
+                <button class="mobile-menu__lang-btn mobile-menu__lang-btn--active" type="button"
+                    data-lang="ua">UA</button>
+                <button class="mobile-menu__lang-btn" type="button" data-lang="ru">RU</button>
+            </div>
+            <div class="mobile-menu__buttons">
+                <a href="/login" class="mobile-menu__btn mobile-menu__btn--login">
+                    <span>Увійти</span>
+                    <img src="assets/images/people-icon.svg" width="24" height="24" alt="" aria-hidden="true">
+                </a>
+                <a href="/apply" class="mobile-menu__btn mobile-menu__btn--offer">Оформити кредит</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <section class="blog-hero">
+            <div class="container">
+                <div class="blog-hero__left">
+                    <div class="breadcrumbs">
+                        <div class="container">
+                            <nav aria-label="Хлібні крихти">
+                                <ul class="breadcrumbs__list">
+                                    <li class="breadcrumbs__item">
+                                        <a href="/" class="breadcrumbs__link">Головна</a>
+                                    </li>
+                                    <li class="breadcrumbs__item" aria-current="page">
+                                        Блог
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="blog-hero__left-content">
+                        <h1>Фінанси без <br> складних слів</h1>
+                        <div class="blog-hero__left-content-description">
+                            <p>Корисні статті, поради та відповіді на важливі питання про кредити, фінансове планування
+                                та онлайн-сервіси. Дізнавайся більше разом із VibeCredit та приймай фінансові рішення
+                                впевнено.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-hero__left-image">
+                    <img src="assets/images/blog-hero-image.png" alt="Блог VibeCredit" width="500" height="400">
+                </div>
+            </div>
+        </section>
+
+        <div class="blog-section">
+            <div class="container">
+                <div class="blog-section-category">
+                    <p class="h3">Категорії</p>
+                    <div class="blog-section-tabs">
+                        <button class="blog-section-tab blog-section-tab--active" type="button" data-category="all">Усі
+                            категорії</button>
+                        <button class="blog-section-tab" type="button"
+                            data-category="finance">Онлайн-кредитування</button>
+                        <button class="blog-section-tab" type="button" data-category="planning">Фінансові
+                            поради</button>
+                        <button class="blog-section-tab" type="button" data-category="online-services">Гроші та
+                            бюджет</button>
+                        <button class="blog-section-tab" type="button" data-category="online-services">Безпека
+                            фінансів</button>
+                        <button class="blog-section-tab" type="button" data-category="online-services">Новини та
+                            оновлення VibeCredit</button>
+                    </div>
+                </div>
+                <div class="blog-section-articles">
+                    <div class="blog-article" data-category="finance">
+                        <a class="news-slide">
+                            <div class="news-slide-img">
+                                <img src="assets/images/news1.png" width="503" height="375" loading="lazy" alt="">
+                            </div>
+                            <div class="news-slide-badge">
+                                Онлайн-кредитування
+                            </div>
+                            <div class="news-slide-content">
+                                <p class="h3">Як швидко отримати кредит онлайн у VibeCredit</p>
+                                <span>Детальніше
+                                    <img src="assets/images/arrow-news.svg" width="20" height="16" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog-article" data-category="planning">
+                        <a class="news-slide">
+                            <div class="news-slide-img">
+                                <img src="assets/images/news1.png" width="503" height="375" loading="lazy" alt="">
+                            </div>
+                            <div class="news-slide-badge">
+                                Онлайн-кредитування
+                            </div>
+                            <div class="news-slide-content">
+                                <p class="h3">Як швидко отримати кредит онлайн у VibeCredit</p>
+                                <span>Детальніше
+                                    <img src="assets/images/arrow-news.svg" width="20" height="16" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog-article" data-category="online-services">
+                        <a class="news-slide">
+                            <div class="news-slide-img">
+                                <img src="assets/images/news1.png" width="503" height="375" loading="lazy" alt="">
+                            </div>
+                            <div class="news-slide-badge">
+                                Онлайн-кредитування
+                            </div>
+                            <div class="news-slide-content">
+                                <p class="h3">Як швидко отримати кредит онлайн у VibeCredit</p>
+                                <span>Детальніше
+                                    <img src="assets/images/arrow-news.svg" width="20" height="16" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog-article" data-category="online-services">
+                        <a class="news-slide">
+                            <div class="news-slide-img">
+                                <img src="assets/images/news1.png" width="503" height="375" loading="lazy" alt="">
+                            </div>
+                            <div class="news-slide-badge">
+                                Онлайн-кредитування
+                            </div>
+                            <div class="news-slide-content">
+                                <p class="h3">Як швидко отримати кредит онлайн у VibeCredit</p>
+                                <span>Детальніше
+                                    <img src="assets/images/arrow-news.svg" width="20" height="16" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog-article" data-category="finance">
+                        <a class="news-slide">
+                            <div class="news-slide-img">
+                                <img src="assets/images/news1.png" width="503" height="375" loading="lazy" alt="">
+                            </div>
+                            <div class="news-slide-badge">
+                                Онлайн-кредитування
+                            </div>
+                            <div class="news-slide-content">
+                                <p class="h3">Як швидко отримати кредит онлайн у VibeCredit</p>
+                                <span>Детальніше
+                                    <img src="assets/images/arrow-news.svg" width="20" height="16" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog-article" data-category="planning">
+                        <a class="news-slide">
+                            <div class="news-slide-img">
+                                <img src="assets/images/news1.png" width="503" height="375" loading="lazy" alt="">
+                            </div>
+                            <div class="news-slide-badge">
+                                Онлайн-кредитування
+                            </div>
+                            <div class="news-slide-content">
+                                <p class="h3">Як швидко отримати кредит онлайн у VibeCredit</p>
+                                <span>Детальніше
+                                    <img src="assets/images/arrow-news.svg" width="20" height="16" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog-article" data-category="online-services">
+                        <a class="news-slide">
+                            <div class="news-slide-img">
+                                <img src="assets/images/news1.png" width="503" height="375" loading="lazy" alt="">
+                            </div>
+                            <div class="news-slide-badge">
+                                Онлайн-кредитування
+                            </div>
+                            <div class="news-slide-content">
+                                <p class="h3">Як швидко отримати кредит онлайн у VibeCredit</p>
+                                <span>Детальніше
+                                    <img src="assets/images/arrow-news.svg" width="20" height="16" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog-article" data-category="online-services">
+                        <a class="news-slide">
+                            <div class="news-slide-img">
+                                <img src="assets/images/news1.png" width="503" height="375" loading="lazy" alt="">
+                            </div>
+                            <div class="news-slide-badge">
+                                Онлайн-кредитування
+                            </div>
+                            <div class="news-slide-content">
+                                <p class="h3">Як швидко отримати кредит онлайн у VibeCredit</p>
+                                <span>Детальніше
+                                    <img src="assets/images/arrow-news.svg" width="20" height="16" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog-article" data-category="finance">
+                        <a class="news-slide">
+                            <div class="news-slide-img">
+                                <img src="assets/images/news1.png" width="503" height="375" loading="lazy" alt="">
+                            </div>
+                            <div class="news-slide-badge">
+                                Онлайн-кредитування
+                            </div>
+                            <div class="news-slide-content">
+                                <p class="h3">Як швидко отримати кредит онлайн у VibeCredit</p>
+                                <span>Детальніше
+                                    <img src="assets/images/arrow-news.svg" width="20" height="16" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog-article" data-category="planning">
+                        <a class="news-slide">
+                            <div class="news-slide-img">
+                                <img src="assets/images/news1.png" width="503" height="375" loading="lazy" alt="">
+                            </div>
+                            <div class="news-slide-badge">
+                                Онлайн-кредитування
+                            </div>
+                            <div class="news-slide-content">
+                                <p class="h3">Як швидко отримати кредит онлайн у VibeCredit</p>
+                                <span>Детальніше
+                                    <img src="assets/images/arrow-news.svg" width="20" height="16" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog-article" data-category="online-services">
+                        <a class="news-slide">
+                            <div class="news-slide-img">
+                                <img src="assets/images/news1.png" width="503" height="375" loading="lazy" alt="">
+                            </div>
+                            <div class="news-slide-badge">
+                                Онлайн-кредитування
+                            </div>
+                            <div class="news-slide-content">
+                                <p class="h3">Як швидко отримати кредит онлайн у VibeCredit</p>
+                                <span>Детальніше
+                                    <img src="assets/images/arrow-news.svg" width="20" height="16" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog-article" data-category="online-services">
+                        <a class="news-slide">
+                            <div class="news-slide-img">
+                                <img src="assets/images/news1.png" width="503" height="375" loading="lazy" alt="">
+                            </div>
+                            <div class="news-slide-badge">
+                                Онлайн-кредитування
+                            </div>
+                            <div class="news-slide-content">
+                                <p class="h3">Як швидко отримати кредит онлайн у VibeCredit</p>
+                                <span>Детальніше
+                                    <img src="assets/images/arrow-news.svg" width="20" height="16" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <button class="blog-section-load-more" type="button">
+                    Завантажити більше
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-card">
+                <a href="/" class="footer-card__img">
+                    <img src="assets/images/footer-logo.png" alt="">
+                </a>
+                <div class="footer-card__info">
+                    <p>Товариство з обмеженою відповідальністю «Мультікредит» </p>
+                    <p>ЄДРПОУ: 44653728 Адреса: 04052 м. Київ, вул. Глибочицька буд. 40, офіс 39 (літ. Н,П)</p>
+                </div>
+                <div class="footer-card__tov">
+                    <p>ТОВ "МУЛЬТІКРЕДИТ" Свідоцтво про реєстрацію фінансової установи ФК №В0000506 від 28.01.2022,
+                        видане Національним банком України". "Ліцензія Національного банку України з надання коштів та
+                        банківських металів у кредит" від 29.03.2024 р.</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <nav class="footer-right-nav">
+                    <ul class="footer-right-nav-list">
+                        <p class="h3">Клієнтам</p>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Інформація щодо захисту прав споживачів
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Інформація для захищеної категорії Споживачів
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Пам’ятка для військовослужбовців
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Політика конфіденційності
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Архів
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="footer-right-nav-list">
+                        <p class="h3">Корисна інформація</p>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Кредит без відмови
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Кредит онлайн
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Гроші до зарплати
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-right__contact">
+                    <address class="footer-right__contact-address">
+                        <a href="tel:0800301008" class="footer-right__contact-phone">0 800 301 008</a>
+                        <a href="mailto:info@vibecredit.com.ua"
+                            class="footer-right__contact-email">info@vibecredit.com.ua</a>
+                    </address>
+                    <div class="footer-right__contact-social">
+                        <p class="h3">Наші соціальні мережі</p>
+                        <ul class="footer-right__contact-social-list">
+                            <li class="footer-right__contact-social-item">
+                                <a href="/" class="footer-right__contact-social-link">
+                                    <img src="assets/images/linkedin.svg" width="33" height="33" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-right__contact-social-item">
+                                <a href="/" class="footer-right__contact-social-link">
+                                    <img src="assets/images/Telegram.svg" width="33" height="33" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-right__contact-social-item">
+                                <a href="/" class="footer-right__contact-social-link">
+                                    <img src="assets/images/Telegrams.svg" width="33" height="33" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-right__contact-social-item">
+                                <a href="/" class="footer-right__contact-social-link">
+                                    <img src="assets/images/Viber.svg" width="33" height="33" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-right__contact-social-item">
+                                <a href="/" class="footer-right__contact-social-link">
+                                    <img src="assets/images/Instagram.svg" width="33" height="33" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-right__contact-card">
+                        <ul class="footer-right__contact-list">
+                            <li class="footer-right__contact-list-item">
+                                <a href="/" class="footer-right__contact-list-link">
+                                    <img src="assets/images/visa.svg" width="50" height="16" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-right__contact-list-item">
+                                <a href="/" class="footer-right__contact-list-link">
+                                    <img src="assets/images/MasterCard.svg" width="50" height="16" alt="">
+                                </a>
+                            </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="details-modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <div class="modal__content-blur"></div>
+            <div class="modal__content-blu-con">
+                <div class="modal__content-title">
+                    <p class="h3">Графік погашення</p>
+                    <button class="modal__close" type="button" aria-label="Закрити">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 6L6 18M6 6l12 12" stroke="#1D1D1B" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal__body">
+                    <div class="loan-application__top-box-table">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><span>1-й платіж</span></td>
+                                    <td><span>840 грн</span></td>
+                                    <td><span>03.04.2026</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>2-й платіж</span></td>
+                                    <td><span>820 грн</span></td>
+                                    <td><span>24.04.2026</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>3-й платіж</span></td>
+                                    <td><span>820 грн</span></td>
+                                    <td><span>15.05.2026</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>4-й платіж</span></td>
+                                    <td><span>820 грн</span></td>
+                                    <td><span>05.06.2026</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>5-й платіж</span></td>
+                                    <td><span>700 грн</span></td>
+                                    <td><span>26.06.2026</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="h3">Вартість користування кредитом</p>
+                        <div class="loan-application__top-info-list">
+                            <div class="loan-application__top-info-item">
+                                <span class="loan-application__top-info-label">Нараховані за час користування кредитом
+                                    проценти</span>
+                                <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                            </div>
+                            <div class="loan-application__top-info-item">
+                                <span class="loan-application__top-info-label">Повернення основного боргу</span>
+                                <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                            </div>
+                            <div class="loan-application__top-info-item">
+                                <span class="loan-application__top-info-label">Вартість користування кредитом</span>
+                                <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
