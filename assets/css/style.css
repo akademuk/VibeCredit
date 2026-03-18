@@ -3889,32 +3889,170 @@ body.no-scroll {
     content: none;
 }
 
+.thank-you-page {
+    padding: 64px 16px 44px 16px;
+}
 
+.thank-you-page .container {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
 
+.thank-you-page__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 44px;
+    align-self: stretch;
+}
 
+.thank-you-page__right {
+    height: 258px;
+    width: 100%;
+    min-width: 176px;
+    border-radius: 32px;
+    background: #FBF2FF;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
 
+.thank-you-page__right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
+.thank-you-page__left-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
 
+.thank-you-page__left-title h1 {
+    color: #212121;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+}
 
+.thank-you-page__left-title b {
+    color: #212121;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2; 
+    letter-spacing: -0.18px;
+}
 
+.thank-you-page__left-title p {
+    color: #212121;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.12px;
+}
 
+.thank-you-page .footer-right__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
 
+.page404.thank-you-page .container {
+    gap: 0;
+}
 
+.page404 .thank-you-page__right {
+    height: 286px;
+    max-width: 486px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    background: transparent;
+    overflow: visible;
+}
 
+.page404 .thank-you-page__right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
+.margin-top {
+    margin-top: 44px;
+}
 
+.page404 .thank-you-page__left-title {
+    gap: 0;
+}
 
+.page404 .thank-you-page__left-title h1 {
+    margin-bottom: 24px;
+}
 
+.page404 .thank-you-page__left-title b {
+    margin-bottom: 32px;
+}
 
+.thank-you-page__left-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
 
+.thank-you-page__left-btn {
+    display: flex;
+    min-height: 56px;
+    padding: 16px 36px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 16px;
+    background: #FBF2FF;
+    text-decoration: none;
+    color: #783999;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2; 
+}
 
-
-
-
-
-
-
-
+.thank-you-page__left-btn2 {
+    display: flex;
+    min-height: 56px;
+    padding: 16px 36px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 16px;
+    background: #783999;
+    text-decoration: none;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;  
+}
 
 
 
@@ -5757,6 +5895,71 @@ body.no-scroll {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .margin-top {
+        margin-top: 64px;
+    }
+
+    .thank-you-page {
+        padding-bottom: 100px;
+    }
+
+    .thank-you-page .container {
+        max-width: 1200px;
+        gap: 64px;
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .thank-you-page__left {
+        width: 572px;
+        justify-content: space-between;
+    }
+
+    .thank-you-page__right {
+        width: 564px;
+        height: 526px;
+        border-radius: 32px;
+        overflow: hidden;
+    }
+
+    .thank-you-page__left-title h1{
+        font-size: 44px;
+    }
+
+    .thank-you-page__left-title b {
+        font-size: 20px;
+    }
+
+    .thank-you-page__left-title p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.3; 
+        letter-spacing: 0.14px;
+    }
+
+    .page404.thank-you-page .container {
+        justify-content: space-between;
+    }
+
+    .page404.thank-you-page  .thank-you-page__right {
+        width: 700px;
+        flex-shrink: 0;
+        height: 505px;
+        max-width: none;
+    }
+
+    .page404 .thank-you-page__left-title b {
+        margin-bottom: 64px;
+    }
+
+    .thank-you-page__left-actions {
+        flex-direction: row;
+    }
+
+    .page404 .thank-you-page__left {
+        justify-content: center;
     }
 }
 
