@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="VibeCredit — фінанси, що відчувають твій вайб. Дізнайтеся більше про наші послуги та продукти.">
+    <title>VibeCredit — фінанси, що відчувають твій вайб</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+
+    <!-- Libraries CSS -->
+    <!-- Libraries CSS (Deferred) -->
+    <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- NoScript Fallback -->
+    <noscript>
+        <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" />
+    </noscript>
+
+    <!-- Scripts (Deferred) -->
+    <script src="assets/libs/swiper/swiper-bundle.min.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="/" class="header__logo" aria-label="VibeCredit — на головну">
+                    <img src="assets/images/logo.png" width="150" height="44" alt="VibeCredit Logo">
+                </a>
+                <nav class="header__nav" aria-label="Основна навігація">
+                    <ul class="header__menu">
+                        <li class="header__menu-item">
+                            <a href="#hero" class="header__menu-link header__menu-link--active">Головна</a>
+                        </li>
+                        <li class="header__menu-item header__menu-item--has-submenu">
+                            <a href="#about-scene" class="header__menu-link" aria-haspopup="true" aria-expanded="false">
+                                Оплата кредиту
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7"
+                                    fill="none">
+                                    <path d="M12.4167 0.750001L6.58333 5.75L0.75 0.75" stroke="#919191"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <ul class="header__submenu">
+                                <li class="header__submenu-item">
+                                    <a href="#payment-card" class="header__submenu-link">Оплата карткою</a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="#payment-terminal" class="header__submenu-link">Оплата через термінал</a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="#payment-schedule" class="header__submenu-link">Графік платежів</a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="#early-repayment" class="header__submenu-link">Дострокове погашення</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#faq" class="header__menu-link">Часті питання</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#about" class="header__menu-link">Про нас</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <div class="header__language">
+                        <select name="language" id="language-select" class="header__language-select"
+                            aria-label="Оберіть мову">
+                            <option value="ua" selected>UA</option>
+                            <option value="ru">RU</option>
+                        </select>
+                    </div>
+                    <div class="header__buttons">
+                        <a href="/login" class="header__btn header__btn--login">
+                            <span>Увійти</span>
+                            <img src="assets/images/people-icon.svg" width="24" height="24" alt="" aria-hidden="true">
+                        </a>
+                        <a href="/apply" class="header__btn header__btn--offer">
+                            Оформити кредит
+                        </a>
+                    </div>
+                </div>
+                <button class="header__burger" aria-label="Відкрити меню" aria-expanded="false"
+                    aria-controls="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu__inner">
+            <nav class="mobile-menu__nav" aria-label="Мобільна навігація">
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__item">
+                        <a href="#hero" class="mobile-menu__link mobile-menu__link--active">Головна</a>
+                    </li>
+                    <li class="mobile-menu__item mobile-menu__item--has-submenu">
+                        <button class="mobile-menu__link mobile-menu__link--toggle" type="button" aria-expanded="false">
+                            Оплата кредиту
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7"
+                                fill="none">
+                                <path d="M12.4167 0.750001L6.58333 5.75L0.75 0.75" stroke="#919191" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <ul class="mobile-menu__submenu">
+                            <li class="mobile-menu__submenu-item">
+                                <a href="#payment-card" class="mobile-menu__submenu-link">Оплата карткою</a>
+                            </li>
+                            <li class="mobile-menu__submenu-item">
+                                <a href="#payment-terminal" class="mobile-menu__submenu-link">Оплата через термінал</a>
+                            </li>
+                            <li class="mobile-menu__submenu-item">
+                                <a href="#payment-schedule" class="mobile-menu__submenu-link">Графік платежів</a>
+                            </li>
+                            <li class="mobile-menu__submenu-item">
+                                <a href="#early-repayment" class="mobile-menu__submenu-link">Дострокове погашення</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#faq" class="mobile-menu__link">Часті питання</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#about" class="mobile-menu__link">Про нас</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__language">
+                <button class="mobile-menu__lang-btn mobile-menu__lang-btn--active" type="button"
+                    data-lang="ua">UA</button>
+                <button class="mobile-menu__lang-btn" type="button" data-lang="ru">RU</button>
+            </div>
+            <div class="mobile-menu__buttons">
+                <a href="/login" class="mobile-menu__btn mobile-menu__btn--login">
+                    <span>Увійти</span>
+                    <img src="assets/images/people-icon.svg" width="24" height="24" alt="" aria-hidden="true">
+                </a>
+                <a href="/apply" class="mobile-menu__btn mobile-menu__btn--offer">Оформити кредит</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <section class="blog-hero blog-hero--about">
+            <div class="container">
+                <div class="blog-hero__left">
+                    <div class="breadcrumbs">
+                        <div class="container">
+                            <nav aria-label="Хлібні крихти">
+                                <ul class="breadcrumbs__list">
+                                    <li class="breadcrumbs__item">
+                                        <a href="/" class="breadcrumbs__link">Головна</a>
+                                    </li>
+                                    <li class="breadcrumbs__item" aria-current="page">
+                                        Про нас
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="blog-hero__left-content">
+                        <h1>Про нас</h1>
+                        <div class="blog-hero__left-content-description">
+                            <p>До зарплати залишилося трохи почекати, але гроші потрібні вже зараз? Бажаєте зробити
+                                комусь подарунок, але не вистачає коштів? Люди доволі часто опиняються в різних
+                                ситуаціях, коли потрібно вирішити фінансове питання швидко.</p>
+                            <p>Правильний вибір – оформити кредит онлайн, а наша компанія буде другом, що простягне вам
+                                руку допомоги. Наша основна мета – надати клієнту позику швидко і без необхідності
+                                збирати великий пакет документів. Кредит онлайн на картку можна оформити, виконавши 4
+                                кроки: подати заявку, заповнити анкету, підтвердити картку – і отримати гроші на
+                                рахунок.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-hero__left-image">
+                    <img src="assets/images/Reviews.png" width="890" height="593" loading="lazy" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-page faq-page--about">
+            <div class="container">
+                <div class="faq-page__left">
+                    <div class="faq-page__left-title">
+                        <p class="h2">Документи та правила</p>
+                    </div>
+                    <div class="faq-page__left-content">
+                        <div class="faq-page__left-content-item">
+                            <p class="h2">Архів документів</p>
+                            <ul class="faq-page--about-list">
+                                <li class="faq-page--about-item">
+                                    <a href="/" class="faq-page--about-link">
+                                        2021
+                                        <span class="faq-right__item-icon">
+                                            <img src="assets/images/arrow-news.svg" width="20" height="20" alt="">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="faq-page--about-item">
+                                    <a href="/" class="faq-page--about-link">
+                                        2022
+                                        <span class="faq-right__item-icon">
+                                            <img src="assets/images/arrow-news.svg" width="20" height="20" alt="">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="faq-page--about-item">
+                                    <a href="/" class="faq-page--about-link">
+                                        2023
+                                        <span class="faq-right__item-icon">
+                                            <img src="assets/images/arrow-news.svg" width="20" height="20" alt="">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="faq-page--about-item">
+                                    <a href="/" class="faq-page--about-link">
+                                        2024
+                                        <span class="faq-right__item-icon">
+                                            <img src="assets/images/arrow-news.svg" width="20" height="20" alt="">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="faq-page--about-item">
+                                    <a href="/" class="faq-page--about-link">
+                                        2025
+                                        <span class="faq-right__item-icon">
+                                            <img src="assets/images/arrow-news.svg" width="20" height="20" alt="">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="faq-page__left-content-item">
+                            <p class="h2">Правила та договірні документи</p>
+                            <ul class="faq-page--about-list">
+                                <li class="faq-page--about-item">
+                                    <a href="/" class="faq-page--about-link">
+                                        Назва розділу
+                                        <span class="faq-right__item-icon">
+                                            <img src="assets/images/arrow-news.svg" width="20" height="20" alt="">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-page__right">
+                    <div class="hero__calc">
+                        <p class="h2">Оформлення кредиту</p>
+                        <form class="hero__calculate" aria-label="Кредитний калькулятор">
+                            <div class="hero__calculate-blur"></div>
+                            <div class="hero__calculate-box">
+                                <div class="hero__calculate-info">
+                                    <div class="hero__calculate-group">
+                                        <label class="hero__calculate-label" for="credit-amount">Сума кредиту</label>
+                                        <input class="hero__calculate-input" type="text" id="credit-amount"
+                                            placeholder="5 000 грн" inputmode="numeric" readonly
+                                            aria-describedby="credit-range">
+                                    </div>
+                                    <div class="hero__calculate-range">
+                                        <input class="hero__calculate-slider" type="range" id="credit-range" min="2000"
+                                            max="20000" value="5000" step="100"
+                                            aria-label="Оберіть суму кредиту від 2000 до 20000 грн">
+                                        <div class="hero__calculate-range-values">
+                                            <span class="hero__calculate-range-min">2 000 грн</span>
+                                            <span class="hero__calculate-range-max">20 000 грн</span>
+                                        </div>
+                                    </div>
+                                    <div class="hero__calculate-term">
+                                        <span class="hero__calculate-term-label">Термін</span>
+                                        <span class="hero__calculate-term-value">105 днів</span>
+                                    </div>
+                                </div>
+                                <div class="hero__calculate-actions">
+                                    <button class="hero__calculate-btn hero__calculate-btn--submit" type="submit">
+                                        Почати оформлення
+                                        <img src="assets/images/btn-arrow.svg" width="24" height="24" alt=""
+                                            aria-hidden="true">
+                                    </button>
+                                    <button class="hero__calculate-btn hero__calculate-btn--details" type="button"
+                                        aria-expanded="false">
+                                        <img src="assets/images/play-icon.svg" width="24" height="24" alt=""
+                                            aria-hidden="true">
+                                        Графік платежів
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="hero__calc-notice" role="note">
+                            <span class="hero__calc-notice-icon" aria-hidden="true">
+                                <img src="assets/images/info.svg" width="18" height="18" alt="">
+                            </span>
+                            <p class="hero__calc-notice-text">Даний блок не є кредитним калькулятором у розумінні
+                                Постанови
+                                НБУ від 05.10.2021 №100. Для ознайомлення з розрахунком кредитного калькулятора та
+                                інформації про умови кредитування <a href="#" class="hero__calc-notice-link">перейдіть
+                                    за
+                                    посиланням</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose why-choose--about">
+            <div class="container">
+                <div class="why-choose__title">
+                    <div class="why-choose__title-text">
+                        <p class="h2">Чому треба обрати саме VibeCredit</p>
+                        <p>VibeCredit — це сучасний сервіс онлайн-кредитування, який підлаштовується під твій ритм
+                            життя. Ми поєднали швидкість, простоту та прозорі умови, щоб ти отримував фінансову
+                            підтримку без стресу та зайвих клопотів.</p>
+                    </div>
+                </div>
+                <div class="why-choose__main">
+                    <div class="why-choose__title-card">
+                        <div class="why-choose__title-card-left">
+                            <div class="why-choose__title-card-left-img">
+                                <img src="assets/images/why-choose__title-card-left-icon.svg" width="32" height="32"
+                                    alt="">
+                            </div>
+                            <div class="why-choose__title-card-left-content">
+                                <p class="h3">Оформлення <br> рішення за 7 хвилин</p>
+                                <p>Проста реєстрація та оперативне ухвалення рішення по вашій заявці. Кошти миттєво
+                                    зараховуються на вашу картку!</p>
+                            </div>
+                        </div>
+                        <div class="why-choose__title-card-right">
+                            <img src="assets/images/why-choose__title-card-right.png" width="510" height="532" alt="">
+                        </div>
+                        <div class="why-choose__image2">
+                            <img src="assets/images/why-choose__image.png" width="85" height="85" loading="lazys"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="why-choose__main-card">
+                        <div class="why-choose__main-card-image">
+                            <img src="assets/images/why-choose__main-card3.svg" width="32" height="32" alt="">
+                        </div>
+                        <div class="why-choose__main-card-content">
+                            <p class="h3">Ваші дані під надійним захистом</p>
+                            <p>Проста реєстрація та оперативне ухвалення рішення по вашій заявці. Кошти миттєво
+                                зараховуються на вашу картку!</p>
+                        </div>
+                    </div>
+                    <div class="why-choose__main-card">
+                        <div class="why-choose__main-card-image">
+                            <img src="assets/images/why-choose__main-card1.svg" width="32" height="32" alt="">
+                        </div>
+                        <div class="why-choose__main-card-content">
+                            <p class="h3">Мінімум документів для оформлення</p>
+                            <p>Проста реєстрація та оперативне ухвалення рішення по вашій заявці. Кошти миттєво
+                                зараховуються на вашу картку!</p>
+                        </div>
+                    </div>
+                    <div class="why-choose__main-card why-choose__main-card--color">
+                        <div class="why-choose__main-card-image">
+                            <img src="assets/images/why-choose__main-card2.svg" width="32" height="32" alt="">
+                        </div>
+                        <div class="why-choose__main-card-content">
+                            <p class="h3">Прозорі умови без прихованих деталей</p>
+                            <p>Проста реєстрація та оперативне ухвалення рішення по вашій заявці. Кошти миттєво
+                                зараховуються на вашу картку!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-choose__main2">
+                    <div class="why-choose__main2-row">
+                        <div class="why-choose__title-card">
+                            <div class="why-choose__title-card-left">
+                                <div class="why-choose__title-card-left-img">
+                                    <img src="assets/images/why-choose__title1.svg" width="32" height="32" alt="">
+                                </div>
+                                <div class="why-choose__title-card-left-content">
+                                    <p class="h3">Сервіс <br> працює 24/7</p>
+                                    <p>Надсилайте та отримуйте позики цілодобово в автоматичному режимі</p>
+                                </div>
+                            </div>
+                            <div class="why-choose__title-card-right">
+                                <img src="assets/images/why-choose--image.png" width="510" height="532" loading="lazy"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="why-choose__main-card">
+                            <div class="why-choose__main-card-image">
+                                <img src="assets/images/why-choose__title3.svg" width="32" height="32" alt="">
+                            </div>
+                            <div class="why-choose__main-card-content">
+                                <p class="h3">Проста процедура заповнення анкети</p>
+                                <p>Вся процедура займає пару хвилин, а при повторному зверненні – пару кліків.</p>
+                            </div>
+                        </div>
+                        <div class="why-choose__main-card">
+                            <div class="why-choose__main-card-image">
+                                <img src="assets/images/why-choose__title2.png" width="32" height="32" alt="">
+                            </div>
+                            <div class="why-choose__main-card-content">
+                                <p class="h3">Доступність по Україні</p>
+                                <p>Можливість оформити онлайн кредит у Києві, Одесі, Дніпрі, Харкові, Запоріжжі або в
+                                    будь-якому іншому місті України.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="why-choose__main-card why-choose__main-card-note">
+                        <div class="why-choose__main-card-image">
+                            <img src="assets/images/why-choose__title2.svg" width="32" height="32" alt="">
+                        </div>
+                        <div class="why-choose__main-card-content">
+                            <p class="h3">Гнучкі умови погашення</p>
+                            <p>Проста реєстрація та оперативне ухвалення рішення по вашій заявці. Кошти миттєво
+                                зараховуються на вашу картку!</p>
+                        </div>
+                        <div class="why-choose__title-card-right">
+                            <img src="assets/images/calendar.png" width="404" height="404" loading="lazy" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <div class="container">
+                <div class="reviews__title">
+                    <p class="h2">Відгуки наших клієнтів</p>
+                    <div class="reviews__title-nav">
+                        <button class="reviews__nav-btn reviews__nav-btn--prev" type="button"
+                            aria-label="Попередній відгук">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="reviews__nav-btn reviews__nav-btn--next" type="button"
+                            aria-label="Наступний відгук">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="reviews__slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="reviews__slide">
+                                <p class="reviews__slide-icon">“</p>
+                                <div class="reviews__slide-desctiption">
+                                    <p>Оформлення зайняло буквально 10–15 хвилин. Все зрозуміло, без прихованих комісій.
+                                        Гроші отримала швидко, сервісом дуже задоволена.</p>
+                                </div>
+                                <div class="reviews__slide-content">
+                                    <div class="reviews__slide-content-info">
+                                        <div class="reviews__slide-content-avatar">
+                                            <img src="assets/images/avatar.svg" width="20" height="20" alt="">
+                                        </div>
+                                        <p>Олена К.</p>
+                                    </div>
+                                    <ul class="reviews__slide-content-stars">
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="reviews__slide">
+                                <p class="reviews__slide-icon">“</p>
+                                <div class="reviews__slide-desctiption">
+                                    <p>Спочатку я була скептично налаштована, але процес виявився простим і зрозумілим.
+                                        Дуже вдячна за швидкість і професіоналізм!</p>
+                                </div>
+                                <div class="reviews__slide-content">
+                                    <div class="reviews__slide-content-info">
+                                        <div class="reviews__slide-content-avatar">
+                                            <img src="assets/images/avatar.svg" width="20" height="20" alt="">
+                                        </div>
+                                        <p>Марія П.</p>
+                                    </div>
+                                    <ul class="reviews__slide-content-stars">
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="reviews__slide">
+                                <p class="reviews__slide-icon">“</p>
+                                <div class="reviews__slide-desctiption">
+                                    <p>Безумовно, це найкращий сервіс, з яким я коли-небудь працював. Я отримав кошти
+                                        протягом декількох хвилин. Рекомендую всім!</p>
+                                </div>
+                                <div class="reviews__slide-content">
+                                    <div class="reviews__slide-content-info">
+                                        <div class="reviews__slide-content-avatar">
+                                            <img src="assets/images/avatar.svg" width="20" height="20" alt="">
+                                        </div>
+                                        <p>Сергій М.</p>
+                                    </div>
+                                    <ul class="reviews__slide-content-stars">
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="reviews__slide">
+                                <p class="reviews__slide-icon">“</p>
+                                <div class="reviews__slide-desctiption">
+                                    <p>Мені сподобалося, що все проходить швидко і без зайвої бюрократії.
+                                        Користуватимуся знову!</p>
+                                </div>
+                                <div class="reviews__slide-content">
+                                    <div class="reviews__slide-content-info">
+                                        <div class="reviews__slide-content-avatar">
+                                            <img src="assets/images/avatar.svg" width="20" height="20" alt="">
+                                        </div>
+                                        <p>Ірина Л.</p>
+                                    </div>
+                                    <ul class="reviews__slide-content-stars">
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="reviews__slide">
+                                <p class="reviews__slide-icon">“</p>
+                                <div class="reviews__slide-desctiption">
+                                    <p>Оформлення зайняло буквально 10–15 хвилин. Все зрозуміло, без прихованих комісій.
+                                        Гроші отримала швидко, сервісом дуже задоволена.</p>
+                                </div>
+                                <div class="reviews__slide-content">
+                                    <div class="reviews__slide-content-info">
+                                        <div class="reviews__slide-content-avatar">
+                                            <img src="assets/images/avatar.svg" width="20" height="20" alt="">
+                                        </div>
+                                        <p>Олена К.</p>
+                                    </div>
+                                    <ul class="reviews__slide-content-stars">
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="reviews__slide">
+                                <p class="reviews__slide-icon">“</p>
+                                <div class="reviews__slide-desctiption">
+                                    <p>Спочатку я була скептично налаштована, але процес виявився простим і зрозумілим.
+                                        Дуже вдячна за швидкість і професіоналізм!</p>
+                                </div>
+                                <div class="reviews__slide-content">
+                                    <div class="reviews__slide-content-info">
+                                        <div class="reviews__slide-content-avatar">
+                                            <img src="assets/images/avatar.svg" width="20" height="20" alt="">
+                                        </div>
+                                        <p>Марія П.</p>
+                                    </div>
+                                    <ul class="reviews__slide-content-stars">
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="reviews__slide">
+                                <p class="reviews__slide-icon">“</p>
+                                <div class="reviews__slide-desctiption">
+                                    <p>Безумовно, це найкращий сервіс, з яким я коли-небудь працював. Я отримав кошти
+                                        протягом декількох хвилин. Рекомендую всім!</p>
+                                </div>
+                                <div class="reviews__slide-content">
+                                    <div class="reviews__slide-content-info">
+                                        <div class="reviews__slide-content-avatar">
+                                            <img src="assets/images/avatar.svg" width="20" height="20" alt="">
+                                        </div>
+                                        <p>Сергій М.</p>
+                                    </div>
+                                    <ul class="reviews__slide-content-stars">
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="reviews__slide">
+                                <p class="reviews__slide-icon">“</p>
+                                <div class="reviews__slide-desctiption">
+                                    <p>Мені сподобалося, що все проходить швидко і без зайвої бюрократії.
+                                        Користуватимуся знову!</p>
+                                </div>
+                                <div class="reviews__slide-content">
+                                    <div class="reviews__slide-content-info">
+                                        <div class="reviews__slide-content-avatar">
+                                            <img src="assets/images/avatar.svg" width="20" height="20" alt="">
+                                        </div>
+                                        <p>Ірина Л.</p>
+                                    </div>
+                                    <ul class="reviews__slide-content-stars">
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                        <li class="reviews__slide-content-star">
+                                            <img src="assets/images/star.svg" width="24" height="24" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-image">
+                    <img src="assets/images/Reviews.png" width="890" height="593" loading="lazy" alt="">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-card">
+                <a href="/" class="footer-card__img">
+                    <img src="assets/images/footer-logo.png" alt="">
+                </a>
+                <div class="footer-card__info">
+                    <p>Товариство з обмеженою відповідальністю «Мультікредит» </p>
+                    <p>ЄДРПОУ: 44653728 Адреса: 04052 м. Київ, вул. Глибочицька буд. 40, офіс 39 (літ. Н,П)</p>
+                </div>
+                <div class="footer-card__tov">
+                    <p>ТОВ "МУЛЬТІКРЕДИТ" Свідоцтво про реєстрацію фінансової установи ФК №В0000506 від 28.01.2022,
+                        видане Національним банком України". "Ліцензія Національного банку України з надання коштів та
+                        банківських металів у кредит" від 29.03.2024 р.</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <nav class="footer-right-nav">
+                    <ul class="footer-right-nav-list">
+                        <p class="h3">Клієнтам</p>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Інформація щодо захисту прав споживачів
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Інформація для захищеної категорії Споживачів
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Пам’ятка для військовослужбовців
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Політика конфіденційності
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Архів
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="footer-right-nav-list">
+                        <p class="h3">Корисна інформація</p>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Кредит без відмови
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Кредит онлайн
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Гроші до зарплати
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-right__contact">
+                    <address class="footer-right__contact-address">
+                        <a href="tel:0800301008" class="footer-right__contact-phone">0 800 301 008</a>
+                        <a href="mailto:info@vibecredit.com.ua"
+                            class="footer-right__contact-email">info@vibecredit.com.ua</a>
+                    </address>
+                    <div class="footer-right__contact-social">
+                        <p class="h3">Наші соціальні мережі</p>
+                        <ul class="footer-right__contact-social-list">
+                            <li class="footer-right__contact-social-item">
+                                <a href="/" class="footer-right__contact-social-link">
+                                    <img src="assets/images/linkedin.svg" width="33" height="33" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-right__contact-social-item">
+                                <a href="/" class="footer-right__contact-social-link">
+                                    <img src="assets/images/Telegram.svg" width="33" height="33" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-right__contact-social-item">
+                                <a href="/" class="footer-right__contact-social-link">
+                                    <img src="assets/images/Telegrams.svg" width="33" height="33" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-right__contact-social-item">
+                                <a href="/" class="footer-right__contact-social-link">
+                                    <img src="assets/images/Viber.svg" width="33" height="33" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-right__contact-social-item">
+                                <a href="/" class="footer-right__contact-social-link">
+                                    <img src="assets/images/Instagram.svg" width="33" height="33" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-right__contact-card">
+                        <ul class="footer-right__contact-list">
+                            <li class="footer-right__contact-list-item">
+                                <a href="/" class="footer-right__contact-list-link">
+                                    <img src="assets/images/visa.svg" width="50" height="16" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-right__contact-list-item">
+                                <a href="/" class="footer-right__contact-list-link">
+                                    <img src="assets/images/MasterCard.svg" width="50" height="16" alt="">
+                                </a>
+                            </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="details-modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <div class="modal__content-blur"></div>
+            <div class="modal__content-blu-con">
+                <div class="modal__content-title">
+                    <p class="h3">Графік погашення</p>
+                    <button class="modal__close" type="button" aria-label="Закрити">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 6L6 18M6 6l12 12" stroke="#1D1D1B" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal__body">
+                    <div class="loan-application__top-box-table">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><span>1-й платіж</span></td>
+                                    <td><span>840 грн</span></td>
+                                    <td><span>03.04.2026</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>2-й платіж</span></td>
+                                    <td><span>820 грн</span></td>
+                                    <td><span>24.04.2026</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>3-й платіж</span></td>
+                                    <td><span>820 грн</span></td>
+                                    <td><span>15.05.2026</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>4-й платіж</span></td>
+                                    <td><span>820 грн</span></td>
+                                    <td><span>05.06.2026</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>5-й платіж</span></td>
+                                    <td><span>700 грн</span></td>
+                                    <td><span>26.06.2026</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="h3">Вартість користування кредитом</p>
+                        <div class="loan-application__top-info-list">
+                            <div class="loan-application__top-info-item">
+                                <span class="loan-application__top-info-label">Нараховані за час користування кредитом
+                                    проценти</span>
+                                <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                            </div>
+                            <div class="loan-application__top-info-item">
+                                <span class="loan-application__top-info-label">Повернення основного боргу</span>
+                                <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                            </div>
+                            <div class="loan-application__top-info-item">
+                                <span class="loan-application__top-info-label">Вартість користування кредитом</span>
+                                <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
