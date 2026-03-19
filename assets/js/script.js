@@ -324,4 +324,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Init
     renderArticles();
   }
+
+  // ===== Scroll to Top =====
+  const scrollToTopBtn = document.getElementById('scroll-to-top');
+  if (scrollToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 });

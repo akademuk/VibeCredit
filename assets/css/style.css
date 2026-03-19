@@ -4054,18 +4054,86 @@ body.no-scroll {
     line-height: 1.2;  
 }
 
+.privacy-policy .faq-page__right{
+    display: none;
+}
 
+.privacy-policy .faq-page__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+}
 
+.privacy-policy .faq-page__left h1 {
+    color: #212121;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2; 
+    margin-bottom: 16px;
+}
 
+.privacy-policy__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
 
+.faq-page__left .h2 {
+    color: #212121;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2; 
+}
 
+.privacy-policy__description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch; 
+    color: #757575;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3; 
+    letter-spacing: 0.12px;
+}
 
+.privacy-policy__description ol,
+.privacy-policy__description ul {
+    padding-left: 20px;
+}
 
+.privacy-policy__description ol li,
+.privacy-policy__description ul li{
+    color: #757575;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3; 
+    letter-spacing: 0.12px;
+}
 
+.privacy-policy__description ul {
+    list-style: disc;
+}
 
+.privacy-policy__description ol {
+    list-style: decimal;
+}
 
+.faq-page__left-date {
+    color: #1D1D1B;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+}
 
-
+.privacy-policy {
+    padding-bottom: 64px;
+}
 
 
 
@@ -5961,6 +6029,42 @@ body.no-scroll {
     .page404 .thank-you-page__left {
         justify-content: center;
     }
+
+    .privacy-policy .faq-page__right {
+        display: flex;
+    }
+
+    .privacy-policy {
+        padding-top: 64px;
+        padding-bottom: 120px;
+        margin-top: 0;
+    }
+
+    .privacy-policy .faq-page__left h1 {
+        font-size: 44px;
+    }
+
+    .faq-page__left .h2 {
+        font-size: 16px;
+    }
+
+    .privacy-policy__description {
+        font-size: 14px;
+        letter-spacing: 0.14px;
+    }
+
+    .privacy-policy__description ol li, .privacy-policy__description ul li {
+        font-size: 14px;
+        letter-spacing: 0.14px;
+    }
+
+    .faq-page__left-date {
+        font-size: 16px;
+    }
+
+    .privacy-policy .container {
+        padding-bottom: 0;
+    }
 }
 
 /* ===== Loan Application: Tabs & Panels ===== */
@@ -6004,4 +6108,32 @@ body.no-scroll {
     max-height: 289px;
     overflow: auto;
     padding-right: 10px;
+}
+
+/* ===== Scroll to Top ===== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1500;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #F7EDFC;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(120, 57, 153, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
