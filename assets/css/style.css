@@ -785,6 +785,10 @@ body.no-scroll {
     align-items: flex-start;
     gap: 16px;
     align-self: stretch;
+    margin-top: 20px;
+    border-radius: 32px;
+    background:#783999;
+    padding: 16px;
 }
 
 .how-to-obtain-content-item:nth-of-type(1):after {
@@ -890,7 +894,7 @@ body.no-scroll {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 36px;
+    gap: 0;
     align-self: stretch;
 }
 
@@ -918,6 +922,7 @@ body.no-scroll {
     flex-direction: column;
     gap: 24px;
     backdrop-filter: blur(25px);
+    margin-bottom: 27px;
 }
 
 .loan-application__top-calc .h2 {
@@ -957,7 +962,6 @@ body.no-scroll {
     padding: 16px 12px;
     border-radius: 32px;
     background: #FFF;
-    backdrop-filter: blur(25px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1125,19 +1129,23 @@ body.no-scroll {
 
 .loan-application__top-list {
     display: flex;
-    padding: 16px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    align-self: stretch;
-    border-radius: 32px;
-    background: #783999;
+    flex-direction: column-reverse;
+    width: 100%;
 }
 
 .loan-application__top-list .h3 {
+    color: #212121;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+}
+
+.loan-application__top-list2 .h3 {
     color: #FFF;
     font-size: 18px;
     font-weight: 600;
+    line-height: 1.2;
     letter-spacing: -0.18px;
 }
 
@@ -1151,6 +1159,10 @@ body.no-scroll {
     align-self: stretch;
     border-radius: 24px;
     background: #FFF;
+}
+
+.loan-application__top-calculator .hero__calculate-blur {
+    display: none;
 }
 
 .loan-application__top-list-label {
@@ -3630,7 +3642,7 @@ body.no-scroll {
 }
 
 .terms-conditions__hero .hero__content {
-    max-width: 1200px;
+    max-width: 800px;
     gap: 0;
 }
 
@@ -3712,6 +3724,9 @@ body.no-scroll {
     border: 1px solid #EEE;
     background: #FFF;
     gap: 30px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .terms-conditions__hero .hero__calculate {
@@ -3751,6 +3766,7 @@ body.no-scroll {
 
 .loan-application .loan-application__top-calculator{
     gap: 0;
+    border-radius: 32px;
 }
 
 .loan-application .loan-application__top-calc {
@@ -4136,7 +4152,76 @@ body.no-scroll {
 }
 
 
+/* ===== Loan Application: Tabs & Panels ===== */
+.loan-application__bottom-left-list {
+    display: none;
+}
 
+.loan-application__bottom-left-list--active {
+    display: flex;
+}
+
+.loan-application__bottom-right-content {
+    display: none;
+}
+
+.loan-application__bottom-right-content--active {
+    display: flex;
+}
+
+/* ===== Loan Application: Accordion ===== */
+.loan-application__bottom-right-accordion .h4 {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    position: relative;
+}
+
+.loan-application__bottom-right-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    overflow: hidden;
+    color: #1D1D1B;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.12px;
+}
+
+.loan-application__bottom-right-accordion.open .loan-application__bottom-right-accordion-content {
+    max-height: 289px;
+    overflow: auto;
+    padding-right: 10px;
+}
+
+/* ===== Scroll to Top ===== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1500;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #F7EDFC;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(120, 57, 153, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 
 
 
@@ -4190,6 +4275,7 @@ body.no-scroll {
     .header__submenu {
         position: absolute;
         top: 100%;
+        z-index: 10;
     }
 
     .header__menu-link {
@@ -4238,6 +4324,10 @@ body.no-scroll {
 
     .header__menu-item--has-submenu:hover .header__submenu {
         max-height: 500px;
+    }
+
+    .header__submenu-item {
+        padding: 8px;
     }
 
     .header__submenu-link {
@@ -4463,13 +4553,17 @@ body.no-scroll {
     }
 
     .how-to-obtain .container {
-        max-width: 1540px;
+        max-width: 1200px;
         width: 100%;
-        padding: 64px;
+        padding: 32px;
         border-radius: 44px;
         gap: 64px;
         position: relative;
         overflow: hidden;
+    }
+
+    .terms-conditions__main {
+        margin-top: 80px;
     }
 
     .how-to-obtain-title {
@@ -4530,6 +4624,8 @@ body.no-scroll {
 
     .how-to-obtain-content-item:nth-of-type(2n) {
         margin-bottom: 60px;
+        min-height: 312px;
+        justify-content: flex-end;
     }
 
     .how-to-obtain-content-item:nth-of-type(1) .how-to-obtain-content-img {
@@ -4537,7 +4633,7 @@ body.no-scroll {
     }
 
     .how-to-obtain-content-item:nth-of-type(2) .how-to-obtain-content-img {
-        height: 88px;
+        height: 92px;
     }
 
     .how-to-obtain-content-item:nth-of-type(3) .how-to-obtain-content-img {
@@ -4607,12 +4703,12 @@ body.no-scroll {
     }
 
     .loan-application {
-        padding: 100px 16px;
+        padding: 96px 16px;
         overflow: hidden;
     }
 
     .loan-application .container {
-        max-width: 1529px;
+        max-width: 1200px;
         gap: 16px;
     }
 
@@ -4932,9 +5028,9 @@ body.no-scroll {
 
     .how-loan__card-item {
         height: 400px;
-        padding: 32px;
-        border-radius: 40px;
-        min-width: 320px;
+        padding: 20px;
+        border-radius: 32px;
+        min-width: auto;
     }
 
     .how-loan__card-item-content .h3 {
@@ -4946,8 +5042,18 @@ body.no-scroll {
     }
 
     .how-loan__card-item-img {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .how-loan__card-item-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: none;
+    }
+
+    .how-loan__card-item:nth-of-type(2) .how-loan__card-item-images  .how-loan__card-item-img img{
+       object-fit: contain;
     }
 
     .reviews {
@@ -5036,7 +5142,7 @@ body.no-scroll {
     }
 
     .faq-left {
-        width: 560px;
+        width: 453px;
         position: relative;
         flex-shrink: 0;
     }
@@ -5333,11 +5439,9 @@ body.no-scroll {
     }
 
     .loan-application__top-list {
-        position: relative;
-    }
-
-    .loan-application__top-list {
         padding: 0;
+        position: relative;
+        display: flex;
     }
 
     .loan-application__top-list2 {
@@ -5798,6 +5902,8 @@ body.no-scroll {
     .terms-conditions__hero .hero__content {
         align-items: flex-start;
         max-width: 572px;
+        width: 572px;
+        min-width: 572px
     }
 
     .terms-conditions__hero .hero__title {
@@ -6065,75 +6171,81 @@ body.no-scroll {
     .privacy-policy .container {
         padding-bottom: 0;
     }
+
+    .terms-conditions__loan-application .loan-application__top-calculator .loan-application__top-calc{
+        max-width: none;
+        width: auto;
+        flex: 1 0 0;
+    }
+
+    .terms-conditions__loan-application .loan-application__top-info {
+        flex: 1 0 0;
+    }
+
+    .terms-conditions__loan-application .loan-application__top-info-message p {
+        font-size: 14px;
+        letter-spacing: 0.14px;
+    }
+
+    .terms-conditions__loan-application .loan-application__top-calculator .loan-application__top-calc {
+        margin-bottom: 0;
+    }
+
+    .terms-conditions__loan-application .loan-application__top-list {
+        flex-direction: row;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .terms-conditions__loan-application .loan-application__top-list2 {
+        flex: 1 0 0;
+        margin: 0;
+    }
+
+    .terms-conditions__loan-application .loan-application__top-box-table {
+        flex: 1 0 0;
+        width: auto;
+        border-radius: 32px;
+        padding: 20px;
+        gap: 24px;
+    }
+
+    .terms-conditions__loan-application .loan-application__top-list-content {
+        flex-direction: column;
+    }
+
+    .loan-application__top-box-table table td {
+        font-size: 14px;
+        letter-spacing: 0.14px;
+    }
+
+    .loan-application__top-box-table table td:nth-child(2) {
+       font-size: 14px;
+        letter-spacing: 0.14px; 
+    }
+
+    .terms-conditions__loan-application .loan-application__top-list-item {
+        min-height: 91px;
+    }
+
+    .terms-conditions__loan-application .loan-application-bg2 {
+        display: flex;
+        position: absolute;
+        width: 350px;
+        height: 466px;
+        right: 100px;
+        z-index: 0;
+        top: auto;
+        bottom: -210px;
+    }
+
+    .terms-conditions__loan-application::before {
+        bottom: 300px;
+    }
+
+    .terms-conditions__loan-application .loan-application__top-calculator {
+        gap: 24px;
+    }
 }
 
-/* ===== Loan Application: Tabs & Panels ===== */
-.loan-application__bottom-left-list {
-    display: none;
-}
 
-.loan-application__bottom-left-list--active {
-    display: flex;
-}
-
-.loan-application__bottom-right-content {
-    display: none;
-}
-
-.loan-application__bottom-right-content--active {
-    display: flex;
-}
-
-/* ===== Loan Application: Accordion ===== */
-.loan-application__bottom-right-accordion .h4 {
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-    position: relative;
-}
-
-.loan-application__bottom-right-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    overflow: hidden;
-    color: #1D1D1B;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 130%;
-    letter-spacing: 0.12px;
-}
-
-.loan-application__bottom-right-accordion.open .loan-application__bottom-right-accordion-content {
-    max-height: 289px;
-    overflow: auto;
-    padding-right: 10px;
-}
-
-/* ===== Scroll to Top ===== */
-.scroll-to-top {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 1500;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: #F7EDFC;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 12px rgba(120, 57, 153, 0.3);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
-}
-
-.scroll-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
