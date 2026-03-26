@@ -298,7 +298,7 @@
             </div>
         </section>
 
-        <section class="loan-application">
+        <!-- <section class="loan-application">
             <div class="container">
                 <div class="loan-application__top">
                     <div class="loan-application__top-box">
@@ -899,7 +899,613 @@
             <div class="loan-application-bg">
                 <img src="assets/images/loan-application.png" width="507" height="575" loading="lazy" alt="">
             </div>
+        </section> -->
+
+        <section class="loan-application terms-conditions__loan-application">
+            <div class="container">
+                <div class="loan-application__top">
+                    <div class="loan-application__top-box">
+                        <div class="loan-application__top-calculator">
+                            <div class="hero__calculate-blur"></div>
+                            <div class="loan-application__top-calc">
+                                <p class="h2">Оформлення кредиту</p>
+                                <div class="hero__calc">
+                                    <form class="hero__calculate" aria-label="Кредитний калькулятор">
+                                        <div class="hero__calculate-box">
+                                            <div class="hero__calculate-info">
+                                                <div class="hero__calculate-group">
+                                                    <label class="hero__calculate-label" for="loan-credit-amount">Сума
+                                                        кредиту</label>
+                                                    <input class="hero__calculate-input" type="text"
+                                                        id="loan-credit-amount" placeholder="5 000 грн"
+                                                        inputmode="numeric" readonly
+                                                        aria-describedby="loan-credit-range">
+                                                </div>
+                                                <div class="hero__calculate-range">
+                                                    <input class="hero__calculate-slider" type="range"
+                                                        id="loan-credit-range" min="2000" max="20000" value="5000"
+                                                        step="100"
+                                                        aria-label="Оберіть суму кредиту від 2000 до 20000 грн">
+                                                    <div class="hero__calculate-range-values">
+                                                        <span class="hero__calculate-range-min">2 000 грн</span>
+                                                        <span class="hero__calculate-range-max">20 000 грн</span>
+                                                    </div>
+                                                </div>
+                                                <div class="hero__calculate-term">
+                                                    <span class="hero__calculate-term-label">Термін</span>
+                                                    <span class="hero__calculate-term-value">105 днів</span>
+                                                </div>
+                                            </div>
+                                            <div class="hero__calculate-actions">
+                                                <button class="hero__calculate-btn hero__calculate-btn--submit"
+                                                    type="submit">
+                                                    Почати оформлення
+                                                    <img src="assets/images/btn-arrow.svg" width="24" height="24" alt=""
+                                                        aria-hidden="true">
+                                                </button>
+                                                <button class="hero__calculate-btn hero__calculate-btn--details"
+                                                    type="button" aria-expanded="false">
+                                                    <img src="assets/images/play-icon.svg" width="24" height="24" alt=""
+                                                        aria-hidden="true">
+                                                    Деталі кредиту
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="hero__calc-notice" role="note">
+                                        <span class="hero__calc-notice-icon" aria-hidden="true">
+                                            <img src="assets/images/info.svg" width="18" height="18" alt="">
+                                        </span>
+                                        <p class="hero__calc-notice-text">Даний блок не є кредитним калькулятором у
+                                            розумінні Постанови НБУ від 05.10.2021 №100. Для ознайомлення з розрахунком
+                                            кредитного калькулятора та інформації про умови кредитування <a href="#"
+                                                class="hero__calc-notice-link">перейдіть за посиланням</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="loan-application__top-info">
+                                <div class="loan-application__top-info-title">
+                                    <p class="h3">Умови вашого договору</p>
+                                </div>
+                                <div class="loan-application__top-info-list">
+                                    <div class="loan-application__top-info-item">
+                                        <span class="loan-application__top-info-label">Сума кредиту</span>
+                                        <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                                    </div>
+                                    <div class="loan-application__top-info-item">
+                                        <span class="loan-application__top-info-label">Термін кредиту</span>
+                                        <p class="loan-application__top-info-value"> <span>...</span> днів</p>
+                                    </div>
+                                    <div class="loan-application__top-info-item">
+                                        <span class="loan-application__top-info-label">Періодичність платежів</span>
+                                        <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                                    </div>
+                                    <div class="loan-application__top-info-item">
+                                        <span class="loan-application__top-info-label">Загальна кількість
+                                            платежів</span>
+                                        <p class="loan-application__top-info-value"> <span>...</span></p>
+                                    </div>
+                                    <div class="loan-application__top-info-item">
+                                        <span class="loan-application__top-info-label">Сума разової комісії за видачу
+                                            кредиту</span>
+                                        <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                                    </div>
+                                    <div class="loan-application__top-info-item">
+                                        <span class="loan-application__top-info-label">Разова комісія за
+                                            обслуговування</span>
+                                        <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                                    </div>
+
+                                    <div class="loan-application__top-info-line"></div>
+
+                                    <div class="loan-application__top-info-item">
+                                        <span class="loan-application__top-info-label">Нараховані за час користування
+                                            кредитом проценти</span>
+                                        <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                                    </div>
+                                    <div class="loan-application__top-info-item">
+                                        <span class="loan-application__top-info-label">Повернення основного боргу</span>
+                                        <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                                    </div>
+                                    <div class="loan-application__top-info-item">
+                                        <span class="loan-application__top-info-label">Вартість користування
+                                            кредитом</span>
+                                        <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                                    </div>
+
+                                    <div class="loan-application__top-info-line"></div>
+
+                                    <div class="loan-application__top-info-item">
+                                        <span class="loan-application__top-info-label">Дата повернення кредиту</span>
+                                        <p class="loan-application__top-info-value"> <span>...</span></p>
+                                    </div>
+                                    <div class="loan-application__top-info-item">
+                                        <span class="loan-application__top-info-label">Процентна ставка</span>
+                                        <p class="loan-application__top-info-value"> <span>1% в день <br> (365%
+                                                річних)</span></p>
+                                    </div>
+                                    <div class="loan-application__top-info-item">
+                                        <span class="loan-application__top-info-label">Максимальна реальна річна
+                                            процентна ставка (РРПС) (розрахунок здійснено за весь строк
+                                            кредитування ... днів)</span>
+                                        <p class="loan-application__top-info-value"> <span>...</span>%</p>
+                                    </div>
+
+                                    <div class="loan-application__top-info-line"></div>
+
+                                    <div class="loan-application__top-info-message">
+                                        <p><b>Важливо: </b>Ви сплачуєте проценти тільки за той період, яким фактично
+                                            користувалися кредитним продуктом!</p>
+                                    </div>
+                                </div>
+                                <div class="loan-application__top-list-img">
+                                    <img src="assets/images/pen.png" width="136" height="144" loading="lazy" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loan-application__top-list">
+                        <div class="loan-application__top-list2">
+                            <p class="h3">Переваги нашого сервісу:</p>
+                            <div class="loan-application__top-list-content">
+                                <div class="loan-application__top-list-item">
+                                    <span class="loan-application__top-list-label">Прозорі умови кредитування</span>
+                                    <span class="loan-application__top-list-value">
+                                        <img src="assets/images/list-label1.svg" width="28" height="28" alt="">
+                                    </span>
+                                </div>
+                                <div class="loan-application__top-list-item">
+                                    <span class="loan-application__top-list-label">Захист ваших персональних
+                                        даних</span>
+                                    <span class="loan-application__top-list-value">
+                                        <img src="assets/images/list-label2.svg" width="28" height="28" alt="">
+                                    </span>
+                                </div>
+                                <div class="loan-application__top-list-item">
+                                    <span class="loan-application__top-list-label">Турботлива служба підтримки</span>
+                                    <span class="loan-application__top-list-value">
+                                        <img src="assets/images/list-label3.svg" width="28" height="28" alt="">
+                                    </span>
+                                </div>
+                                <div class="loan-application__top-list-item">
+                                    <span class="loan-application__top-list-label">Видаємо на будь-яку карту видану
+                                        українським банком</span>
+                                    <span class="loan-application__top-list-value">
+                                        <img src="assets/images/list-label4.svg" width="28" height="28" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="loan-application__top-box-table">
+                            <p class="h3">Графік погашення</p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td><span>1-й платіж</span></td>
+                                        <td><span>840 грн</span></td>
+                                        <td><span>03.04.2026</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>2-й платіж</span></td>
+                                        <td><span>820 грн</span></td>
+                                        <td><span>24.04.2026</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>3-й платіж</span></td>
+                                        <td><span>820 грн</span></td>
+                                        <td><span>15.05.2026</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>4-й платіж</span></td>
+                                        <td><span>820 грн</span></td>
+                                        <td><span>05.06.2026</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>5-й платіж</span></td>
+                                        <td><span>700 грн</span></td>
+                                        <td><span>26.06.2026</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="loan-application-bg2">
+                            <img src="assets/images/loan-application.png" width="507" height="575" loading="lazy"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="loan-application__bottom">
+                    <div class="loan-application__bottom-left">
+                        <p class="h3">Кредитні продукти</p>
+                        <div class="loan-application__bottom-left-content">
+                            <div class="loan-application__bottom-left-tabs">
+                                <button
+                                    class="loan-application__bottom-left-tab loan-application__bottom-left-tab--active"
+                                    type="button" aria-selected="true" aria-controls="tab1">Мікрокредит</button>
+                                <button class="loan-application__bottom-left-tab" type="button" aria-selected="false"
+                                    aria-controls="tab2">Споживчий кредит</button>
+                            </div>
+                            <div class="loan-application__bottom-left-list">
+                                <a href="/" class="loan-application__bottom-left-link">
+                                    <img src="assets/images/File.svg" width="20" height="20" alt="">
+                                    <div class="loan-application__bottom-left-list-content">
+                                        <p class="h4">Істотні характеристики</p>
+                                        <p>Інформація про істотні характеристики послуги</p>
+                                    </div>
+                                </a>
+                                <a href="/" class="loan-application__bottom-left-link">
+                                    <img src="assets/images/File.svg" width="20" height="20" alt="">
+                                    <div class="loan-application__bottom-left-list-content">
+                                        <p class="h4">Правила</p>
+                                        <p>Внутрішні правила про надання коштів</p>
+                                    </div>
+                                </a>
+                                <a href="/" class="loan-application__bottom-left-link">
+                                    <img src="assets/images/File.svg" width="20" height="20" alt="">
+                                    <div class="loan-application__bottom-left-list-content">
+                                        <p class="h4">Договір</p>
+                                        <p>ПРИМІРНИЙ ДОГОВІР ПРО СПОЖИВЧИЙ КРЕДИТ</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="loan-application__bottom-left-list">
+                                <a href="/" class="loan-application__bottom-left-link">
+                                    <img src="assets/images/File.svg" width="20" height="20" alt="">
+                                    <div class="loan-application__bottom-left-list-content">
+                                        <p class="h4">Істотні характеристики 2</p>
+                                        <p>Інформація про істотні характеристики послуги</p>
+                                    </div>
+                                </a>
+                                <a href="/" class="loan-application__bottom-left-link">
+                                    <img src="assets/images/File.svg" width="20" height="20" alt="">
+                                    <div class="loan-application__bottom-left-list-content">
+                                        <p class="h4">Правила 2</p>
+                                        <p>Внутрішні правила про надання коштів</p>
+                                    </div>
+                                </a>
+                                <a href="/" class="loan-application__bottom-left-link">
+                                    <img src="assets/images/File.svg" width="20" height="20" alt="">
+                                    <div class="loan-application__bottom-left-list-content">
+                                        <p class="h4">Договір 2</p>
+                                        <p>ПРИМІРНИЙ ДОГОВІР ПРО СПОЖИВЧИЙ КРЕДИТ</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loan-application__bottom-right">
+                        <div class="loan-application__bottom-right-content">
+                            <div class="loan-application__bottom-right-accordion">
+                                <p class="h4">Інформація для клієнтів</p>
+                                <div class="loan-application__bottom-right-accordion-content">
+                                    «Споживчий кредит/мікрокредит для нового клієнта». Під «новим клієнтом» мається на
+                                    увазі що Позичальник раніше не користувався послугами Кредитодавця і не мав з
+                                    останнім договірних відносин в минулому
+                                    Сума (ліміт), на яку (який) може бути наданий споживчий кредит/мікрокредит (від
+                                    мінімального розміру до максимального), строк користування нею (ним) (від
+                                    мінімального значення до максимального) від 2 000,00 грн. до 7 000,00 грн. строком
+                                    105 календарних днів Наявність, перелік і вартість супровідних послуг фінансової
+                                    установи, кредитних посередників та третіх осіб, уключаючи розмір платежу та базу
+                                    його розрахунку Комісія за надання кредиту може становити від 100 до 150,00 грн.
+                                    Реальна річна процентна ставка від 9 768,48% до 10 570,66%«Споживчий
+                                    кредит/мікрокредит для нового клієнта». Під «новим клієнтом» мається на увазі що
+                                    Позичальник раніше не користувався послугами Кредитодавця і не мав з останнім
+                                    договірних відносин в минулому Сума (ліміт), на яку (який) може бути наданий
+                                    споживчий кредит/мікрокредит (від мінімального розміру до максимального), строк
+                                    користування нею (ним) (від мінімального значення до максимального) від 2 000,00
+                                    грн. до 7 000,00 грн. строком 105 календарних днів Наявність, перелік і вартість
+                                    супровідних послуг фінансової установи, кредитних посередників та третіх осіб,
+                                    уключаючи розмір платежу та базу його розрахунку Комісія за надання кредиту може
+                                    становити від 100 до 150,00 грн. Реальна річна процентна ставка від 9 768,48% до 10
+                                    570,66%«Споживчий кредит/мікрокредит для нового клієнта». Під «новим клієнтом»
+                                    мається на увазі що Позичальник раніше не користувався послугами Кредитодавця і не
+                                    мав з останнім договірних відносин в минулому
+                                    Сума (ліміт), на яку (який) може бути наданий споживчий кредит/мікрокредит (від
+                                    мінімального розміру до максимального), строк користування нею (ним) (від
+                                    мінімального значення до максимального) від 2 000,00 грн. до 7 000,00 грн. строком
+                                    105 календарних днів Наявність, перелік і вартість супровідних послуг фінансової
+                                    установи, кредитних посередників та третіх осіб, уключаючи розмір платежу та базу
+                                    його розрахунку Комісія за надання кредиту може становити від 100 до 150,00 грн.
+                                    Реальна річна процентна ставка від 9 768,48% до 10 570,66%«Споживчий
+                                    кредит/мікрокредит для нового клієнта». Під «новим клієнтом» мається на увазі що
+                                    Позичальник раніше не користувався послугами Кредитодавця і не мав з останнім
+                                    договірних відносин в минулому
+                                    Сума (ліміт), на яку (який) може бути наданий споживчий кредит/мікрокредит (від
+                                    мінімального розміру до максимального), строк користування нею (ним) (від
+                                    мінімального значення до максимального) від 2 000,00 грн. до 7 000,00 грн. строком
+                                    105 календарних днів Наявність, перелік і вартість супровідних послуг фінансової
+                                    установи, кредитних посередників та третіх осіб, уключаючи розмір платежу та базу
+                                    його розрахунку Комісія за надання кредиту може становити від 100 до 150,00 грн.
+                                    Реальна річна процентна ставка від 9 768,48% до 10 570,66%
+                                </div>
+                            </div>
+                            <div class="loan-application__bottom-right-accordion">
+                                <p class="h4">Попередження</p>
+                                <div class="loan-application__bottom-right-accordion-content">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>1. Відповідальність Споживача за невиконання умов договору
+                                                        про мікрокредит:</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>1.1. За прострочення оплати кожного з платежів, що
+                                                        передбачені Договором,</strong><br>
+                                                    <strong>Позичальник зобов’язується сплатити на користь Кредитодавця
+                                                        пеню у розмірі</strong><br>
+                                                    <strong>подвійної облікової ставки Національного банку України, що
+                                                        діяла у період, за який</strong><br>
+                                                    <strong>сплачується пеня, від суми кожного з прострочених платежів,
+                                                        але не більше 15</strong><br>
+                                                    <strong>відсотків суми простроченого платежу.</strong><br>
+                                                    <strong>1.2. У разі, якщо Позичальник прострочив виконання грошового
+                                                        зобов’язання (не</strong><br>
+                                                    <strong>повернув суму Кредиту і проценти за користування ним, (далі
+                                                        – сума боргу) у строк</strong><br>
+                                                    <strong>визначений у Договорі (строк кредитування), то він на вимогу
+                                                        Кредитодавця</strong><br>
+                                                    <strong>зобов’язаний сплатити денну процентну ставку у розмірі 1,00%
+                                                        (один процент) від</strong><br>
+                                                    <strong>суми боргу за весь час прострочення згідно з ч. 2 ст. 625
+                                                        Цивільного кодексу України</strong><br>
+                                                    <strong>та Договором про споживчий кредит.</strong><br>
+                                                    <strong>1.3. У разі, якщо Позичальник прострочив виконання грошового
+                                                        зобов’язання (не</strong><br>
+                                                    <strong>повернув суму Кредиту і проценти за користування ним, (далі
+                                                        – сума боргу) у строк</strong><br>
+                                                    <strong>визначений Договором, то він на вимогу Кредитодавця
+                                                        зобов’язаний сплатити суму</strong><br>
+                                                    <strong>Кредиту, проценти за користування ним з урахуванням
+                                                        встановленого індексу</strong><br>
+                                                    <strong>інфляції за весь час прострочення, а також денну процентну
+                                                        ставку у розмірі 1,00%</strong><br>
+                                                    <strong>(одна ціла нуль сотих), проценти від тіла кредиту за весь
+                                                        час прострочення а також</strong><br>
+                                                    <strong>перші три дні протермінування оплати, яка мала надійти
+                                                        згідно графіку платежів,</strong><br>
+                                                    <strong>штраф в розмірі 5% (п’ять процентів) в день від суми
+                                                        протермінованого зобов’язання</strong><br>
+                                                    <strong>за кожен день прострочення платежу, починаючи з четвертого
+                                                        дня протермінування</strong><br>
+                                                    <strong>– штраф 50% від суми протермінованого зобов’язання за кожен
+                                                        день прострочення</strong><br>
+                                                    <strong>платежу (але не більше ніж встановлена законодавством
+                                                        України гранична сума</strong><br>
+                                                    <strong>штрафу та пені, які можуть бути нараховані за споживчим
+                                                        кредитом).</strong><br>
+                                                    <strong>1.4. Сукупна сума неустойки (пені), нарахована за порушення
+                                                        зобов’язань</strong><br>
+                                                    <strong>Споживачем на підставі договору про споживчий
+                                                        кредит/мікрокредит, за п..п. 1.1.</strong><br>
+                                                    <strong>цього Попередження не може перевищувати половини суми,
+                                                        одержаної</strong><br>
+                                                    <strong>Споживачем за таким договором, і не може бути збільшена за
+                                                        домовленністю сторін.</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>2. ТОВ «Мультікредит» також попереджає Споживача про
+                                                        наступні умови та його</strong><br>
+                                                    <strong>права при наданні споживчого кредиту/мікрокредиту:</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>2.1. Споживач для прийняття усвідомленого рішення щодо
+                                                        отримання споживчого</strong><br>
+                                                    <strong>кредиту/мікрокредиту має право розглянути альтернативні
+                                                        різновиди споживчих</strong><br>
+                                                    <strong>кредитів: споживчий кредит/мікрокредит для нового та
+                                                        споживчий кредит для</strong><br>
+                                                    <strong>повторного клієнта, які надаються ТОВ «Мультікредит», а
+                                                        також різновиди споживчих</strong><br>
+                                                    <strong>кредитів інших фінансових установ.</strong><br>
+                                                    <strong>2.2. ТОВ «Мультікредит» при наданні споживчого
+                                                        кредиту/мікрокредиту не вимагає</strong><br>
+                                                    <strong>від Споживача придбання будь-яких товарів чи послуг у ТОВ
+                                                        «Мультікредит» або</strong><br>
+                                                    <strong>спорідненої чи пов’язаною з нею особи.</strong><br>
+                                                    <strong>2.3. ТОВ «Мультікредит» попереджає, що порушення виконання
+                                                        щодо повернення</strong><br>
+                                                    <strong>споживчого кредиту/мікрокредиту Споживачем може вплинути на
+                                                        кредитну історію</strong><br>
+                                                    <strong>та ускладнити отримання споживчого кредиту
+                                                        надалі.</strong><br>
+                                                    <strong>2.4. У разі необхідності ТОВ «Мультікредит» має право
+                                                        вносити зміни до укладених зі</strong><br>
+                                                    <strong>Споживачами договорів про споживчий кредит/мікрокредит
+                                                        тільки за згодою на те</strong><br>
+                                                    <strong>Споживача. Порядок внесення змін з урахуванням цієї умови
+                                                        зазначено в договорах.</strong><br>
+                                                    <strong>2.5. Витрати по сплаті Споживачем платежів за користування
+                                                        споживчим</strong><br>
+                                                    <strong>кредитом/мікрокредитом в залежності від обраного способу
+                                                        сплачує Споживач.</strong><br>
+                                                    <strong>2.6. Споживач має право відмовитися від отримання рекламних
+                                                        матеріалів</strong><br>
+                                                    <strong>Кредитодавця каналами дистанційного електронного
+                                                        обслуговування,</strong><br>
+                                                    <strong>передзвонивши на контактний телефон служби обслуговування
+                                                        клієнтів: 0 800 200</strong><br>
+                                                    <strong>001, або направивши листа довільної форми на
+                                                        електрону</strong><br>
+                                                    <strong>адресу: info@beecredit.com.ua</strong>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="loan-application__bottom-right-content">
+                            <div class="loan-application__bottom-right-accordion">
+                                <p class="h4">Інформація для клієнтів 2</p>
+                                <div class="loan-application__bottom-right-accordion-content">
+                                    «Споживчий кредит/мікрокредит для нового клієнта». Під «новим клієнтом» мається на
+                                    увазі що Позичальник раніше не користувався послугами Кредитодавця і не мав з
+                                    останнім договірних відносин в минулому
+                                    Сума (ліміт), на яку (який) може бути наданий споживчий кредит/мікрокредит (від
+                                    мінімального розміру до максимального), строк користування нею (ним) (від
+                                    мінімального значення до максимального) від 2 000,00 грн. до 7 000,00 грн. строком
+                                    105 календарних днів Наявність, перелік і вартість супровідних послуг фінансової
+                                    установи, кредитних посередників та третіх осіб, уключаючи розмір платежу та базу
+                                    його розрахунку Комісія за надання кредиту може становити від 100 до 150,00 грн.
+                                    Реальна річна процентна ставка від 9 768,48% до 10 570,66%«Споживчий
+                                    кредит/мікрокредит для нового клієнта». Під «новим клієнтом» мається на увазі що
+                                    Позичальник раніше не користувався послугами Кредитодавця і не мав з останнім
+                                    договірних відносин в минулому Сума (ліміт), на яку (який) може бути наданий
+                                    споживчий кредит/мікрокредит (від мінімального розміру до максимального), строк
+                                    користування нею (ним) (від мінімального значення до максимального) від 2 000,00
+                                    грн. до 7 000,00 грн. строком 105 календарних днів Наявність, перелік і вартість
+                                    супровідних послуг фінансової установи, кредитних посередників та третіх осіб,
+                                    уключаючи розмір платежу та базу його розрахунку Комісія за надання кредиту може
+                                    становити від 100 до 150,00 грн. Реальна річна процентна ставка від 9 768,48% до 10
+                                    570,66%«Споживчий кредит/мікрокредит для нового клієнта». Під «новим клієнтом»
+                                    мається на увазі що Позичальник раніше не користувався послугами Кредитодавця і не
+                                    мав з останнім договірних відносин в минулому
+                                    Сума (ліміт), на яку (який) може бути наданий споживчий кредит/мікрокредит (від
+                                    мінімального розміру до максимального), строк користування нею (ним) (від
+                                    мінімального значення до максимального) від 2 000,00 грн. до 7 000,00 грн. строком
+                                    105 календарних днів Наявність, перелік і вартість супровідних послуг фінансової
+                                    установи, кредитних посередників та третіх осіб, уключаючи розмір платежу та базу
+                                    його розрахунку Комісія за надання кредиту може становити від 100 до 150,00 грн.
+                                    Реальна річна процентна ставка від 9 768,48% до 10 570,66%«Споживчий
+                                    кредит/мікрокредит для нового клієнта». Під «новим клієнтом» мається на увазі що
+                                    Позичальник раніше не користувався послугами Кредитодавця і не мав з останнім
+                                    договірних відносин в минулому
+                                    Сума (ліміт), на яку (який) може бути наданий споживчий кредит/мікрокредит (від
+                                    мінімального розміру до максимального), строк користування нею (ним) (від
+                                    мінімального значення до максимального) від 2 000,00 грн. до 7 000,00 грн. строком
+                                    105 календарних днів Наявність, перелік і вартість супровідних послуг фінансової
+                                    установи, кредитних посередників та третіх осіб, уключаючи розмір платежу та базу
+                                    його розрахунку Комісія за надання кредиту може становити від 100 до 150,00 грн.
+                                    Реальна річна процентна ставка від 9 768,48% до 10 570,66%
+                                </div>
+                            </div>
+                            <div class="loan-application__bottom-right-accordion">
+                                <p class="h4">Попередження 2</p>
+                                <div class="loan-application__bottom-right-accordion-content">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>1. Відповідальність Споживача за невиконання умов договору
+                                                        про мікрокредит:</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>1.1. За прострочення оплати кожного з платежів, що
+                                                        передбачені Договором,</strong><br>
+                                                    <strong>Позичальник зобов’язується сплатити на користь Кредитодавця
+                                                        пеню у розмірі</strong><br>
+                                                    <strong>подвійної облікової ставки Національного банку України, що
+                                                        діяла у період, за який</strong><br>
+                                                    <strong>сплачується пеня, від суми кожного з прострочених платежів,
+                                                        але не більше 15</strong><br>
+                                                    <strong>відсотків суми простроченого платежу.</strong><br>
+                                                    <strong>1.2. У разі, якщо Позичальник прострочив виконання грошового
+                                                        зобов’язання (не</strong><br>
+                                                    <strong>повернув суму Кредиту і проценти за користування ним, (далі
+                                                        – сума боргу) у строк</strong><br>
+                                                    <strong>визначений у Договорі (строк кредитування), то він на вимогу
+                                                        Кредитодавця</strong><br>
+                                                    <strong>зобов’язаний сплатити денну процентну ставку у розмірі 1,00%
+                                                        (один процент) від</strong><br>
+                                                    <strong>суми боргу за весь час прострочення згідно з ч. 2 ст. 625
+                                                        Цивільного кодексу України</strong><br>
+                                                    <strong>та Договором про споживчий кредит.</strong><br>
+                                                    <strong>1.3. У разі, якщо Позичальник прострочив виконання грошового
+                                                        зобов’язання (не</strong><br>
+                                                    <strong>повернув суму Кредиту і проценти за користування ним, (далі
+                                                        – сума боргу) у строк</strong><br>
+                                                    <strong>визначений Договором, то він на вимогу Кредитодавця
+                                                        зобов’язаний сплатити суму</strong><br>
+                                                    <strong>Кредиту, проценти за користування ним з урахуванням
+                                                        встановленого індексу</strong><br>
+                                                    <strong>інфляції за весь час прострочення, а також денну процентну
+                                                        ставку у розмірі 1,00%</strong><br>
+                                                    <strong>(одна ціла нуль сотих), проценти від тіла кредиту за весь
+                                                        час прострочення а також</strong><br>
+                                                    <strong>перші три дні протермінування оплати, яка мала надійти
+                                                        згідно графіку платежів,</strong><br>
+                                                    <strong>штраф в розмірі 5% (п’ять процентів) в день від суми
+                                                        протермінованого зобов’язання</strong><br>
+                                                    <strong>за кожен день прострочення платежу, починаючи з четвертого
+                                                        дня протермінування</strong><br>
+                                                    <strong>– штраф 50% від суми протермінованого зобов’язання за кожен
+                                                        день прострочення</strong><br>
+                                                    <strong>платежу (але не більше ніж встановлена законодавством
+                                                        України гранична сума</strong><br>
+                                                    <strong>штрафу та пені, які можуть бути нараховані за споживчим
+                                                        кредитом).</strong><br>
+                                                    <strong>1.4. Сукупна сума неустойки (пені), нарахована за порушення
+                                                        зобов’язань</strong><br>
+                                                    <strong>Споживачем на підставі договору про споживчий
+                                                        кредит/мікрокредит, за п..п. 1.1.</strong><br>
+                                                    <strong>цього Попередження не може перевищувати половини суми,
+                                                        одержаної</strong><br>
+                                                    <strong>Споживачем за таким договором, і не може бути збільшена за
+                                                        домовленністю сторін.</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>2. ТОВ «Мультікредит» також попереджає Споживача про
+                                                        наступні умови та його</strong><br>
+                                                    <strong>права при наданні споживчого кредиту/мікрокредиту:</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>2.1. Споживач для прийняття усвідомленого рішення щодо
+                                                        отримання споживчого</strong><br>
+                                                    <strong>кредиту/мікрокредиту має право розглянути альтернативні
+                                                        різновиди споживчих</strong><br>
+                                                    <strong>кредитів: споживчий кредит/мікрокредит для нового та
+                                                        споживчий кредит для</strong><br>
+                                                    <strong>повторного клієнта, які надаються ТОВ «Мультікредит», а
+                                                        також різновиди споживчих</strong><br>
+                                                    <strong>кредитів інших фінансових установ.</strong><br>
+                                                    <strong>2.2. ТОВ «Мультікредит» при наданні споживчого
+                                                        кредиту/мікрокредиту не вимагає</strong><br>
+                                                    <strong>від Споживача придбання будь-яких товарів чи послуг у ТОВ
+                                                        «Мультікредит» або</strong><br>
+                                                    <strong>спорідненої чи пов’язаною з нею особи.</strong><br>
+                                                    <strong>2.3. ТОВ «Мультікредит» попереджає, що порушення виконання
+                                                        щодо повернення</strong><br>
+                                                    <strong>споживчого кредиту/мікрокредиту Споживачем може вплинути на
+                                                        кредитну історію</strong><br>
+                                                    <strong>та ускладнити отримання споживчого кредиту
+                                                        надалі.</strong><br>
+                                                    <strong>2.4. У разі необхідності ТОВ «Мультікредит» має право
+                                                        вносити зміни до укладених зі</strong><br>
+                                                    <strong>Споживачами договорів про споживчий кредит/мікрокредит
+                                                        тільки за згодою на те</strong><br>
+                                                    <strong>Споживача. Порядок внесення змін з урахуванням цієї умови
+                                                        зазначено в договорах.</strong><br>
+                                                    <strong>2.5. Витрати по сплаті Споживачем платежів за користування
+                                                        споживчим</strong><br>
+                                                    <strong>кредитом/мікрокредитом в залежності від обраного способу
+                                                        сплачує Споживач.</strong><br>
+                                                    <strong>2.6. Споживач має право відмовитися від отримання рекламних
+                                                        матеріалів</strong><br>
+                                                    <strong>Кредитодавця каналами дистанційного електронного
+                                                        обслуговування,</strong><br>
+                                                    <strong>передзвонивши на контактний телефон служби обслуговування
+                                                        клієнтів: 0 800 200</strong><br>
+                                                    <strong>001, або направивши листа довільної форми на
+                                                        електрону</strong><br>
+                                                    <strong>адресу: info@beecredit.com.ua</strong>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="loan-application-bg">
+                <img src="assets/images/loan-application.png" width="507" height="575" loading="lazy" alt="">
+            </div>
         </section>
+
 
         <section class="why-choose">
             <div class="container">

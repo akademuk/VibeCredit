@@ -325,6 +325,50 @@ document.addEventListener('DOMContentLoaded', () => {
     renderArticles();
   }
 
+  // ===== Radio Tabs (Passport / ID-card) =====
+  const radioTabs = document.querySelectorAll('.global-section__form-radio-input');
+  const tabPanels = document.querySelectorAll('.global-section__info--tabs[data-tab]');
+  if (radioTabs.length && tabPanels.length) {
+    const tabMap = {
+      'individual': 'passport',
+      'entrepreneur': 'id-card',
+      'identification-individual': 'passport',
+      'identification-entrepreneur': 'id-card',
+    };
+
+    function showRadioTab(radioId) {
+      const targetTab = tabMap[radioId];
+      if (!targetTab) return;
+      // Find sibling panels within the same form
+      const form = document.getElementById(radioId)?.closest('form') || document;
+      const panels = form.querySelectorAll('.global-section__info--tabs[data-tab]');
+      panels.forEach((panel) => {
+        panel.style.display = panel.dataset.tab === targetTab ? '' : 'none';
+      });
+    }
+
+    radioTabs.forEach((radio) => {
+      radio.addEventListener('change', () => {
+        showRadioTab(radio.id);
+      });
+      // Init: show panel for checked radio
+      if (radio.checked) {
+        showRadioTab(radio.id);
+      }
+    });
+  }
+
+  // ===== Same Address Checkbox =====
+  const sameAddressCheckbox = document.getElementById('sameAddress');
+  const addressBlock = document.querySelector('.global-section__form-group-chaked-address');
+  if (sameAddressCheckbox && addressBlock) {
+    function toggleAddressBlock() {
+      addressBlock.style.display = sameAddressCheckbox.checked ? 'none' : '';
+    }
+    sameAddressCheckbox.addEventListener('change', toggleAddressBlock);
+    toggleAddressBlock();
+  }
+
   // ===== Scroll to Top =====
   const scrollToTopBtn = document.getElementById('scroll-to-top');
   if (scrollToTopBtn) {
@@ -340,4 +384,94 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
+
+  // ===== Countdown Timer =====
+  const timerEl = document.getElementById('countdown-timer');
+  const timerText = document.getElementById('countdown-text');
+  if (timerEl && timerText) {
+    const duration = parseInt(timerEl.dataset.duration, 10) || 600;
+    const progressCircle = timerEl.querySelector('.countdown-timer__progress');
+    const radius = 85;
+    const circumference = 2 * Math.PI * radius; // ~534.07
+    let remaining = duration;
+
+    progressCircle.style.strokeDasharray = circumference;
+
+    function updateTimer() {
+      const minutes = Math.floor(remaining / 60);
+      const seconds = remaining % 60;
+      timerText.textContent =
+        String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
+
+      const progress = remaining / duration;
+      const offset = circumference * (1 - progress);
+      progressCircle.style.strokeDashoffset = offset;
+
+      if (remaining <= 0) {
+        clearInterval(timerInterval);
+        return;
+      }
+      remaining--;
+    }
+
+    updateTimer();
+    const timerInterval = setInterval(updateTimer, 1000);
+  }
+
+  // ===== Phone Mask =====
+  document.querySelectorAll('[data-phone-mask]').forEach((input) => {
+    const isShort = input.dataset.phoneMask === 'short';
+    const prefix = isShort ? '' : '+380 ';
+
+    function applyMask(value) {
+      // Strip everything except digits
+      let digits = value.replace(/\D/g, '');
+
+      // For full mask, remove leading 380 if user typed it
+      if (!isShort) {
+        if (digits.startsWith('380')) digits = digits.slice(3);
+        if (digits.startsWith('0')) digits = digits.slice(1);
+      }
+
+      // Limit to 9 digits (Ukrainian number without +380)
+      digits = digits.slice(0, 9);
+
+      let result = prefix;
+      if (digits.length > 0) result += '(' + digits.slice(0, 2);
+      if (digits.length >= 2) result += ') ';
+      if (digits.length > 2) result += digits.slice(2, 5);
+      if (digits.length > 5) result += '-' + digits.slice(5, 7);
+      if (digits.length > 7) result += '-' + digits.slice(7, 9);
+
+      return result;
+    }
+
+    input.addEventListener('input', (e) => {
+      const cursorPos = e.target.selectionStart;
+      const beforeLength = e.target.value.length;
+      e.target.value = applyMask(e.target.value);
+      const afterLength = e.target.value.length;
+      const newCursor = cursorPos + (afterLength - beforeLength);
+      e.target.setSelectionRange(newCursor, newCursor);
+    });
+
+    input.addEventListener('focus', () => {
+      if (!input.value) {
+        input.value = prefix;
+      }
+    });
+
+    input.addEventListener('blur', () => {
+      if (input.value === prefix || input.value === '+380 ') {
+        input.value = '';
+      }
+    });
+
+    // Handle paste
+    input.addEventListener('paste', (e) => {
+      e.preventDefault();
+      const pasted = (e.clipboardData || window.clipboardData).getData('text');
+      input.value = applyMask(pasted);
+    });
+  });
 });

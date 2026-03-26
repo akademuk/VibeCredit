@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="VibeCredit — фінанси, що відчувають твій вайб. Дізнайтеся більше про наші послуги та продукти.">
+    <title>VibeCredit — фінанси, що відчувають твій вайб</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+
+    <!-- Libraries CSS -->
+    <!-- Libraries CSS (Deferred) -->
+    <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- NoScript Fallback -->
+    <noscript>
+        <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" />
+    </noscript>
+
+    <!-- Scripts (Deferred) -->
+    <script src="assets/libs/swiper/swiper-bundle.min.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="/" class="header__logo" aria-label="VibeCredit — на головну">
+                    <img src="assets/images/logo.png" width="150" height="44" alt="VibeCredit Logo">
+                </a>
+                <nav class="header__nav" aria-label="Основна навігація">
+                    <ul class="header__menu">
+                        <li class="header__menu-item">
+                            <a href="#hero" class="header__menu-link header__menu-link--active">Головна</a>
+                        </li>
+                        <li class="header__menu-item header__menu-item--has-submenu">
+                            <a href="#about-scene" class="header__menu-link" aria-haspopup="true" aria-expanded="false">
+                                Оплата кредиту
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7"
+                                    fill="none">
+                                    <path d="M12.4167 0.750001L6.58333 5.75L0.75 0.75" stroke="#919191"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <ul class="header__submenu">
+                                <li class="header__submenu-item">
+                                    <a href="#payment-card" class="header__submenu-link">Оплата карткою</a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="#payment-terminal" class="header__submenu-link">Оплата через термінал</a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="#payment-schedule" class="header__submenu-link">Графік платежів</a>
+                                </li>
+                                <li class="header__submenu-item">
+                                    <a href="#early-repayment" class="header__submenu-link">Дострокове погашення</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#faq" class="header__menu-link">Часті питання</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#about" class="header__menu-link">Про нас</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <div class="header__language">
+                        <select name="language" id="language-select" class="header__language-select"
+                            aria-label="Оберіть мову">
+                            <option value="ua" selected>UA</option>
+                            <option value="ru">RU</option>
+                        </select>
+                    </div>
+                    <div class="header__buttons">
+                        <a href="/login" class="header__btn header__btn--login">
+                            <span>Увійти</span>
+                            <img src="assets/images/people-icon.svg" width="24" height="24" alt="" aria-hidden="true">
+                        </a>
+                        <a href="/apply" class="header__btn header__btn--offer">
+                            Оформити кредит
+                        </a>
+                    </div>
+                </div>
+                <button class="header__burger" aria-label="Відкрити меню" aria-expanded="false"
+                    aria-controls="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu__inner">
+            <nav class="mobile-menu__nav" aria-label="Мобільна навігація">
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__item">
+                        <a href="#hero" class="mobile-menu__link mobile-menu__link--active">Головна</a>
+                    </li>
+                    <li class="mobile-menu__item mobile-menu__item--has-submenu">
+                        <button class="mobile-menu__link mobile-menu__link--toggle" type="button" aria-expanded="false">
+                            Оплата кредиту
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7"
+                                fill="none">
+                                <path d="M12.4167 0.750001L6.58333 5.75L0.75 0.75" stroke="#919191" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <ul class="mobile-menu__submenu">
+                            <li class="mobile-menu__submenu-item">
+                                <a href="#payment-card" class="mobile-menu__submenu-link">Оплата карткою</a>
+                            </li>
+                            <li class="mobile-menu__submenu-item">
+                                <a href="#payment-terminal" class="mobile-menu__submenu-link">Оплата через термінал</a>
+                            </li>
+                            <li class="mobile-menu__submenu-item">
+                                <a href="#payment-schedule" class="mobile-menu__submenu-link">Графік платежів</a>
+                            </li>
+                            <li class="mobile-menu__submenu-item">
+                                <a href="#early-repayment" class="mobile-menu__submenu-link">Дострокове погашення</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#faq" class="mobile-menu__link">Часті питання</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="#about" class="mobile-menu__link">Про нас</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__language">
+                <button class="mobile-menu__lang-btn mobile-menu__lang-btn--active" type="button"
+                    data-lang="ua">UA</button>
+                <button class="mobile-menu__lang-btn" type="button" data-lang="ru">RU</button>
+            </div>
+            <div class="mobile-menu__buttons">
+                <a href="/login" class="mobile-menu__btn mobile-menu__btn--login">
+                    <span>Увійти</span>
+                    <img src="assets/images/people-icon.svg" width="24" height="24" alt="" aria-hidden="true">
+                </a>
+                <a href="/apply" class="mobile-menu__btn mobile-menu__btn--offer">Оформити кредит</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="margin-top">
+
+        <div class="breadcrumbs">
+            <div class="container">
+                <nav aria-label="Хлібні крихти">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="/" class="breadcrumbs__link">Головна</a>
+                        </li>
+                        <li class="breadcrumbs__item" aria-current="page">
+                            Реєстрація
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <section class="global-section">
+            <div class="container">
+                <div class="global-section__content global-section__content--register">
+                    <h1>Реєстрація</h1>
+                    <p class="h2">Первинні дані та контактна інформація</p>
+                    <div class="global-section__content-text">
+                        <p>Щоб отримати кредит, пройдіть просту та швидку реєстрацію. Ви отримаєте миттєвий доступ до
+                            вигідних умов кредитування, створених з турботою про наших клієнтів.</p>
+                    </div>
+                    <div class="global-section__content-box">
+                        <p class="h3">Вже зареєстровані?</p>
+                        <div class="global-section__content-box-text">
+                            <p><a href="/login.html">Увійдіть у свій кабінет</a> і скористуйтеся всіма можливостями, які
+                                ми підготували для вас!</p>
+                        </div>
+                    </div>
+                    <div class="global-section__content-img">
+                        <img src="assets/images/global-section__content-img.png" width="530" height="277" loading="lazy"
+                            alt="">
+                    </div>
+                </div>
+                <div class="global-section__info">
+                    <form class="global-section__form">
+                        <div class="global-section__form-title">
+                            <p class="h3">Форма реєстрації</p>
+                        </div>
+                        <div class="global-section__form-group">
+                            <label for="name" class="global-section__form-label">Прізвище</label>
+                            <input type="text" id="name" name="name" class="global-section__form-input"
+                                placeholder="Введіть" required>
+                        </div>
+                        <div class="global-section__form-group">
+                            <label for="firstName" class="global-section__form-label">Імʼя</label>
+                            <input type="text" id="firstName" name="firstName" class="global-section__form-input"
+                                placeholder="Введіть" required>
+                        </div>
+                        <div class="global-section__form-group">
+                            <label for="lastName" class="global-section__form-label">По-батькові</label>
+                            <input type="text" id="lastName" name="lastName" class="global-section__form-input"
+                                placeholder="Введіть" required>
+                        </div>
+                        <div class="global-section__form-group">
+                            <label for="email" class="global-section__form-label">Email</label>
+                            <input type="email" id="email" name="email" class="global-section__form-input"
+                                placeholder="Введіть" required>
+                        </div>
+                        <div class="global-section__form-radio">
+                            <div class="global-section__form-group">
+                                <input type="radio" id="individual" name="userType"
+                                    class="global-section__form-radio-input" checked>
+                                <label for="individual" class="global-section__form-radio-label">Паспорт</label>
+                            </div>
+                            <div class="global-section__form-group">
+                                <input type="radio" id="entrepreneur" name="userType"
+                                    class="global-section__form-radio-input">
+                                <label for="entrepreneur" class="global-section__form-radio-label">ID-картка</label>
+                            </div>
+                        </div>
+                        <div class="global-section__info--tabs" data-tab="passport">
+                            <div class="global-section__form-group">
+                                <label for="series" class="global-section__form-label">Серія</label>
+                                <input type="text" id="series" name="series" class="global-section__form-input"
+                                    placeholder="Введіть" required>
+                                <span>В полі можуть бути записані символи тільки кирилицею, всі символи мають бути
+                                    верхньому регістрі, має бути не більше двох символів</span>
+                            </div>
+                            <div class="global-section__form-group">
+                                <label for="numeric" class="global-section__form-label">Номер</label>
+                                <input type="text" id="numeric" name="numeric" class="global-section__form-input"
+                                    placeholder="Введіть" required>
+                                <span>В полі може бути тільки цифри, має бути не більше і не менше 6 цифр</span>
+                            </div>
+                            <div class="global-section__form-group">
+                                <label for="issuedBy" class="global-section__form-label">Ким виданий</label>
+                                <input type="text" id="issuedBy" name="issuedBy" class="global-section__form-input"
+                                    placeholder="Введіть" required>
+                                <span>В полі інформація вноситься текстом, немає бути цифр</span>
+                            </div>
+                            <div class="global-section__form-group">
+                                <label for="issuedDate" class="global-section__form-label">Коли виданий</label>
+                                <input type="date" id="issuedDate" name="issuedDate" class="global-section__form-input"
+                                    placeholder="Введіть" required>
+                            </div>
+                            <div class="global-section__form-group">
+                                <label for="employment" class="global-section__form-label">Працевлаштування</label>
+                                <select name="employment" id="employment" class="global-section__form-input" required>
+                                    <option value="">Виберіть</option>
+                                    <option value="1">Працюю за наймом</option>
+                                    <option value="2">Працюю на себе</option>
+                                    <option value="3">Пенсіонер</option>
+                                    <option value="4">Студент</option>
+                                </select>
+                            </div>
+                            <div class="global-section__form-group">
+                                <label for="company" class="global-section__form-label">Компанія</label>
+                                <input type="text" id="company" name="company" class="global-section__form-input"
+                                    placeholder="Введіть" required>
+                            </div>
+                        </div>
+                        <div class="global-section__info--tabs" data-tab="id-card" style="display: none;">
+                            <div class="global-section__form-group">
+                                <label for="uniqueNumber" class="global-section__form-label">Унікальний номер
+                                    запису</label>
+                                <input type="text" id="uniqueNumber" name="uniqueNumber"
+                                    class="global-section__form-input" placeholder="Введіть" required>
+                                <span>Унікальний номер запису в Єдиному державному демографічному реєстрі (13 цифр,
+                                    розташований у правому нижньому куті лицьового боку ID-картки)</span>
+                            </div>
+                            <div class="global-section__form-group">
+                                <label for="documentNumber" class="global-section__form-label">Номер документа</label>
+                                <input type="text" id="documentNumber" name="documentNumber"
+                                    class="global-section__form-input" placeholder="Введіть" required>
+                                <span>Номер документа (9 цифр, розташований у правому нижньому куті лицьового
+                                    боку)</span>
+                            </div>
+                            <div class="global-section__form-group">
+                                <label for="expiryDate" class="global-section__form-label">Дата закінчення строку
+                                    дії</label>
+                                <input type="date" id="expiryDate" name="expiryDate" class="global-section__form-input"
+                                    placeholder="Введіть" required>
+                            </div>
+                            <div class="global-section__form-group">
+                                <label for="employment2" class="global-section__form-label">Працевлаштування</label>
+                                <select name="employment2" id="employment2" class="global-section__form-input" required>
+                                    <option value="">Виберіть</option>
+                                    <option value="1">Працюю за наймом</option>
+                                    <option value="2">Працюю на себе</option>
+                                    <option value="3">Пенсіонер</option>
+                                    <option value="4">Студент</option>
+                                </select>
+                            </div>
+                            <div class="global-section__form-group">
+                                <label for="company2" class="global-section__form-label">Компанія</label>
+                                <input type="text" id="company2" name="company2" class="global-section__form-input"
+                                    placeholder="Введіть" required>
+                            </div>
+                        </div>
+                        <div class="global-section__form-group">
+                            <label for="city" class="global-section__form-label">Місто</label>
+                            <select name="city" id="city" class="global-section__form-input" required>
+                                <option value="">Виберіть</option>
+                                <option value="1">Київ</option>
+                                <option value="2">Львів</option>
+                                <option value="3">Одеса</option>
+                                <option value="4">Харків</option>
+                            </select>
+                        </div>
+                        <div class="global-section__form-group">
+                            <label for="district" class="global-section__form-label">Район</label>
+                            <select name="district" id="district" class="global-section__form-input" required>
+                                <option value="">Виберіть</option>
+                                <option value="1">Голосіївський</option>
+                                <option value="2">Дарницький</option>
+                                <option value="3">Деснянський</option>
+                                <option value="4">Печерський</option>
+                            </select>
+                        </div>
+                        <div class="global-section__form-group">
+                            <label for="region" class="global-section__form-label">Область</label>
+                            <select name="region" id="region" class="global-section__form-input" required>
+                                <option value="">Виберіть</option>
+                                <option value="1">Київська</option>
+                                <option value="2">Львівська</option>
+                                <option value="3">Одеська</option>
+                                <option value="4">Харківська</option>
+                            </select>
+                        </div>
+                        <div class="global-section__form-group">
+                            <label for="street" class="global-section__form-label">Вулиця</label>
+                            <input type="text" id="street" name="street" class="global-section__form-input"
+                                placeholder="Введіть" required>
+                        </div>
+                        <div class="global-section__form-row">
+                            <div class="global-section__form-group">
+                                <label for="house" class="global-section__form-label">Будинок</label>
+                                <input type="text" id="house" name="house" class="global-section__form-input"
+                                    placeholder="Введіть" required>
+                            </div>
+                            <div class="global-section__form-group">
+                                <label for="corpus" class="global-section__form-label">Корпус</label>
+                                <input type="text" id="corpus" name="corpus" class="global-section__form-input"
+                                    placeholder="Введіть" required>
+                            </div>
+                            <div class="global-section__form-group">
+                                <label for="apartment" class="global-section__form-label">Квартира</label>
+                                <input type="text" id="apartment" name="apartment" class="global-section__form-input"
+                                    placeholder="Введіть" required>
+                            </div>
+                        </div>
+                        <div class="global-section__form-group-chaked">
+                            <input type="checkbox" id="sameAddress" name="sameAddress"
+                                class="global-section__form-checkbox">
+                            <label for="sameAddress" class="global-section__form-label-chaked">Адреса реєстрації
+                                співпадає з фактичною</label>
+                        </div>
+
+                        <div class="global-section__form-group-chaked-address">
+                            <p class="h3">Фактичне місце проживання</p>
+                            <div class="global-section__form-group">
+                                <label for="city2" class="global-section__form-label">Місто</label>
+                                <select name="city2" id="city2" class="global-section__form-input" required>
+                                    <option value="">Виберіть</option>
+                                    <option value="1">Київ</option>
+                                    <option value="2">Львів</option>
+                                    <option value="3">Одеса</option>
+                                    <option value="4">Харків</option>
+                                </select>
+                            </div>
+                            <div class="global-section__form-group">
+                                <label for="district2" class="global-section__form-label">Район</label>
+                                <select name="district2" id="district2" class="global-section__form-input" required>
+                                    <option value="">Виберіть</option>
+                                    <option value="1">Голосіївський</option>
+                                    <option value="2">Дарницький</option>
+                                    <option value="3">Деснянський</option>
+                                    <option value="4">Печерський</option>
+                                </select>
+                            </div>
+                            <div class="global-section__form-group">
+                                <label for="region3" class="global-section__form-label">Область</label>
+                                <select name="region3" id="region3" class="global-section__form-input" required>
+                                    <option value="">Виберіть</option>
+                                    <option value="1">Київська</option>
+                                    <option value="2">Львівська</option>
+                                    <option value="3">Одеська</option>
+                                    <option value="4">Харківська</option>
+                                </select>
+                            </div>
+                            <div class="global-section__form-group">
+                                <label for="street2" class="global-section__form-label">Вулиця</label>
+                                <input type="text" id="street2" name="street2" class="global-section__form-input"
+                                    placeholder="Введіть" required>
+                            </div>
+                            <div class="global-section__form-row">
+                                <div class="global-section__form-group">
+                                    <label for="house2" class="global-section__form-label">Будинок</label>
+                                    <input type="text" id="house2" name="house2" class="global-section__form-input"
+                                        placeholder="Введіть" required>
+                                </div>
+                                <div class="global-section__form-group">
+                                    <label for="corpus2" class="global-section__form-label">Корпус</label>
+                                    <input type="text" id="corpus2" name="corpus2" class="global-section__form-input"
+                                        placeholder="Введіть" required>
+                                </div>
+                                <div class="global-section__form-group">
+                                    <label for="apartment2" class="global-section__form-label">Квартира</label>
+                                    <input type="text" id="apartment2" name="apartment2"
+                                        class="global-section__form-input" placeholder="Введіть" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="global-section__form-chexbox">
+                            <div class="global-section__form-group">
+                                <input type="checkbox" id="terms" name="terms" class="global-section__form-checkbox"
+                                    required>
+                                <label for="terms" class="global-section__form-checkbox-label">
+                                    Згоден на
+                                    <a href="/" class="global-section__form-link">обробку інформації</a>
+                                    , передачу даних до бюро кредитних історій та ознайомлений з
+                                    <a href="/" class="global-section__form-link">правилами кредитування</a>.
+                                </label>
+                            </div>
+                            <div class="global-section__form-group">
+                                <input type="checkbox" id="newsletter" name="newsletter"
+                                    class="global-section__form-checkbox">
+                                <label for="newsletter" class="global-section__form-checkbox-label">
+                                    Хочу отримувати цікаву інформацію від партнерів та спеціальні пропозиції від
+                                    партнерів.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="global-section__form-captha">
+                            <div class="global-section__form-captha-box">
+                                <img src="assets/images/captcha.png" width="467" height="76" alt="Капча">
+                            </div>
+                        </div>
+                        <div class="global-section__form-btns">
+                            <a href="/register" class="global-section__form-btn global-section__form-btn--login">
+                                Далі
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-card">
+                <a href="/" class="footer-card__img">
+                    <img src="assets/images/footer-logo.png" alt="">
+                </a>
+                <div class="footer-card__info">
+                    <p>Товариство з обмеженою відповідальністю «Мультікредит» </p>
+                    <p>ЄДРПОУ: 44653728 Адреса: 04052 м. Київ, вул. Глибочицька буд. 40, офіс 39 (літ. Н,П)</p>
+                </div>
+                <div class="footer-card__tov">
+                    <p>ТОВ "МУЛЬТІКРЕДИТ" Свідоцтво про реєстрацію фінансової установи ФК №В0000506 від 28.01.2022,
+                        видане Національним банком України". "Ліцензія Національного банку України з надання коштів та
+                        банківських металів у кредит" від 29.03.2024 р.</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <nav class="footer-right-nav">
+                    <ul class="footer-right-nav-list">
+                        <p class="h3">Клієнтам</p>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Інформація щодо захисту прав споживачів
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Інформація для захищеної категорії Споживачів
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Пам’ятка для військовослужбовців
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Політика конфіденційності
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Архів
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="footer-right-nav-list">
+                        <p class="h3">Корисна інформація</p>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Кредит без відмови
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Кредит онлайн
+                            </a>
+                        </li>
+                        <li class="footer-right-nav-item">
+                            <a href="/" class="footer-right-nav-link">
+                                Гроші до зарплати
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-right__contact">
+                    <address class="footer-right__contact-address">
+                        <a href="tel:0800301008" class="footer-right__contact-phone">0 800 301 008</a>
+                        <a href="mailto:info@vibecredit.com.ua"
+                            class="footer-right__contact-email">info@vibecredit.com.ua</a>
+                    </address>
+                    <div class="footer-right__contact-social">
+                        <p class="h3">Наші соціальні мережі</p>
+                        <ul class="footer-right__contact-social-list">
+                            <li class="footer-right__contact-social-item">
+                                <a href="/" class="footer-right__contact-social-link">
+                                    <img src="assets/images/linkedin.svg" width="33" height="33" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-right__contact-social-item">
+                                <a href="/" class="footer-right__contact-social-link">
+                                    <img src="assets/images/Telegram.svg" width="33" height="33" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-right__contact-social-item">
+                                <a href="/" class="footer-right__contact-social-link">
+                                    <img src="assets/images/Telegrams.svg" width="33" height="33" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-right__contact-social-item">
+                                <a href="/" class="footer-right__contact-social-link">
+                                    <img src="assets/images/Viber.svg" width="33" height="33" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-right__contact-social-item">
+                                <a href="/" class="footer-right__contact-social-link">
+                                    <img src="assets/images/Instagram.svg" width="33" height="33" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-right__contact-card">
+                        <ul class="footer-right__contact-list">
+                            <li class="footer-right__contact-list-item">
+                                <a href="/" class="footer-right__contact-list-link">
+                                    <img src="assets/images/visa.svg" width="50" height="16" alt="">
+                                </a>
+                            </li>
+                            <li class="footer-right__contact-list-item">
+                                <a href="/" class="footer-right__contact-list-link">
+                                    <img src="assets/images/MasterCard.svg" width="50" height="16" alt="">
+                                </a>
+                            </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="details-modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <div class="modal__content-blur"></div>
+            <div class="modal__content-blu-con">
+                <div class="modal__content-title">
+                    <p class="h3">Графік погашення</p>
+                    <button class="modal__close" type="button" aria-label="Закрити">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 6L6 18M6 6l12 12" stroke="#1D1D1B" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal__body">
+                    <div class="loan-application__top-box-table">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><span>1-й платіж</span></td>
+                                    <td><span>840 грн</span></td>
+                                    <td><span>03.04.2026</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>2-й платіж</span></td>
+                                    <td><span>820 грн</span></td>
+                                    <td><span>24.04.2026</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>3-й платіж</span></td>
+                                    <td><span>820 грн</span></td>
+                                    <td><span>15.05.2026</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>4-й платіж</span></td>
+                                    <td><span>820 грн</span></td>
+                                    <td><span>05.06.2026</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span>5-й платіж</span></td>
+                                    <td><span>700 грн</span></td>
+                                    <td><span>26.06.2026</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="h3">Вартість користування кредитом</p>
+                        <div class="loan-application__top-info-list">
+                            <div class="loan-application__top-info-item">
+                                <span class="loan-application__top-info-label">Нараховані за час користування кредитом
+                                    проценти</span>
+                                <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                            </div>
+                            <div class="loan-application__top-info-item">
+                                <span class="loan-application__top-info-label">Повернення основного боргу</span>
+                                <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                            </div>
+                            <div class="loan-application__top-info-item">
+                                <span class="loan-application__top-info-label">Вартість користування кредитом</span>
+                                <p class="loan-application__top-info-value"> <span>...</span> грн</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
