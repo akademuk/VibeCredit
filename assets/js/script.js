@@ -327,8 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== Radio Tabs (Passport / ID-card) =====
   const radioTabs = document.querySelectorAll('.global-section__form-radio-input');
-  const tabPanels = document.querySelectorAll('.global-section__info--tabs[data-tab]');
-  if (radioTabs.length && tabPanels.length) {
+  if (radioTabs.length) {
     const tabMap = {
       'individual': 'passport',
       'entrepreneur': 'id-card',
@@ -339,9 +338,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function showRadioTab(radioId) {
       const targetTab = tabMap[radioId];
       if (!targetTab) return;
-      // Find sibling panels within the same form
-      const form = document.getElementById(radioId)?.closest('form') || document;
-      const panels = form.querySelectorAll('.global-section__info--tabs[data-tab]');
+      // Find sibling panels within the closest parent box or form
+      const container = document.getElementById(radioId)?.closest('.global-section--cabinet__box, form') || document;
+      const panels = container.querySelectorAll('[data-tab]');
       panels.forEach((panel) => {
         panel.style.display = panel.dataset.tab === targetTab ? '' : 'none';
       });
@@ -474,4 +473,50 @@ document.addEventListener('DOMContentLoaded', () => {
       input.value = applyMask(pasted);
     });
   });
+
+  // ===== Custom File Upload =====
+  document.querySelectorAll('.file-upload__input').forEach((input) => {
+    input.addEventListener('change', () => {
+      const textEl = input.closest('.file-upload').querySelector('.file-upload__text');
+      if (input.files && input.files.length > 0) {
+        textEl.textContent = input.files[0].name;
+        textEl.classList.add('file-upload__text--selected');
+      } else {
+        textEl.textContent = 'Оберіть файл';
+        textEl.classList.remove('file-upload__text--selected');
+      }
+    });
+  });
+
+  /* ===== Saved Cards: delete & add ===== */
+  const savedCardsContainer = document.querySelector('.saved-cards');
+  if (savedCardsContainer) {
+    // Delete card
+    savedCardsContainer.addEventListener('click', function (e) {
+      const removeBtn = e.target.closest('.saved-cards__remove');
+      if (!removeBtn) return;
+      removeBtn.closest('.saved-cards__item').remove();
+    });
+
+    // Add new card
+    const addBtn = document.querySelector('.saved-cards__btn--add');
+    if (addBtn) {
+      addBtn.addEventListener('click', function () {
+        const newItem = document.createElement('div');
+        newItem.className = 'saved-cards__item';
+        newItem.innerHTML =
+          '<label class="saved-cards__label">Картка</label>' +
+          '<div class="saved-cards__field">' +
+            '<input type="text" class="saved-cards__input" placeholder="Не додано">' +
+            '<button type="button" class="saved-cards__remove" aria-label="Видалити">' +
+              '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">' +
+                '<path d="M15.7128 16.7726L7.22748 8.28728C6.93757 7.99737 6.93757 7.51653 7.22748 7.22662C7.5174 6.93671 7.99823 6.93671 8.28814 7.22662L16.7734 15.7119C17.0633 16.0018 17.0633 16.4826 16.7734 16.7726C16.4835 17.0625 16.0027 17.0625 15.7128 16.7726Z" fill="#1D1D1B"/>' +
+                '<path d="M7.22658 16.7735C6.93666 16.4836 6.93666 16.0028 7.22658 15.7129L15.7119 7.2276C16.0018 6.93768 16.4826 6.93768 16.7725 7.2276C17.0624 7.51751 17.0624 7.99834 16.7725 8.28826L8.28724 16.7735C7.99732 17.0635 7.51649 17.0635 7.22658 16.7735Z" fill="#1D1D1B"/>' +
+                '</svg>' +
+            '</button>' +
+          '</div>';
+        savedCardsContainer.appendChild(newItem);
+      });
+    }
+  }
 });
