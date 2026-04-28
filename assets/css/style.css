@@ -4496,11 +4496,24 @@ input[type="date"].global-section__form-input::-webkit-calendar-picker-indicator
     padding: 0;
     background: transparent;
     border: none;
+    cursor: pointer;
     letter-spacing: 0.12px;
 }
 
 .global-section-img {
     display: none;
+}
+
+/* Hide number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 .global-section__content-box {
@@ -5204,7 +5217,6 @@ input[type="date"].global-section__form-input::-webkit-calendar-picker-indicator
     font-weight: 500;
     line-height: 1.2;
 }
-
 
 
 
